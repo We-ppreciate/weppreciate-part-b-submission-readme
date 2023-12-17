@@ -19,9 +19,21 @@
 
 
 ## R1 At minimum use MongoDB, Express, React, Node
-In addition to the above, we used the following packages, frameworks and technology:
+We used the following packages, frameworks and technology:
 
 ### Backend
+
+#### Node
+
+
+#### npm
+
+
+#### MongoDB
+
+
+#### Express
+
 
 #### Google Cloud Storage
 
