@@ -138,7 +138,7 @@ This API uses the following error codes:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /`|
+|Endpoint|`GET /`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/)|
 |Parameters|None|
 |Response|Returns a JSON object with the following properties: `message` - a static reponse from the server|
@@ -147,7 +147,7 @@ This API uses the following error codes:
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/
 ```
 
 Response:
@@ -173,15 +173,21 @@ Four main paths are available in the API:
 
 |  |  |
 |--|--|
-|Endpoint:|`POST /auth/login`|
+|Endpoint|`POST /auth/login`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login)|
 |Parameters|*email*: string; *password*: sting|
-|Response|Returns a JSON object with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManbagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service. The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconveience of a short validity period. In the commercial applciation, the authentication would be moved to SAML SSO through Azure, aligning with the client's requirements.|
+|Response|Returns a JSON object with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManbagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service.|
+|Note|The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconveience of a short validity period. In the commercial applciation, a better application would be to carry a shorter validity, such as 24 hours, with a longer refresh token, but on deployment for the client, the authentication would be moved to SAML SSO, through Azure, we did not implement the refresh token in this case.|
 
 **Example**
 
 Request:
 ```
+
+POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login
+
+REQUEST BODY
+
 {
   "name": "your.name@yourcompany.com",
   "password": "youRSup3rS3cRet"
@@ -206,14 +212,14 @@ Response:
     "isLineManager": false,
     "isSeniorManager": false,
     "isAdmin": false,
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdkN2MzM2Q4Yjk3ZTc3ZWZlMDE5MzEiLCJpYXQiOjE3MDMzMzE1MjksImV4cCI6MTcwMzkzNjMyOX0.MGxXGoJx-qJCAnb_wqslMds0vwAlwuFmv0lHCKSV-BQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdkNdMzM2Q4Yjk3ZTc3ZWZlMDE5MzEiLCJpYXQiOjE3MD5zMzE1MjksImV4cCI6MTcwMzkzNjNyOX0.MGxXGoJx-qJCAnb_wqslMds0vwAlwuGmv0lHCKSV-BQ"
 }
 ```
 
 
 |  |  |
 |--|--|
-|Endpoint:|`PATCH /auth/reset/:id`|
+|Endpoint|`PATCH /auth/reset/:id`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/reset/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/reset/:id)|
 |Parameters|**URL query** *:id* - forms the query within the URL and is the id of the account requiring the password reset; **request body** *newPassword*: string|
 |Response|Returns a JSON object with the following properties: **message** |
@@ -222,6 +228,10 @@ Response:
 
 Request:
 ```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/reset/657d7c33d8b97e77efe01931
+
+REQUEST BODY
+
 {
   "newPassword": "youRSup3rS3cRetNEW"
 }
@@ -239,7 +249,7 @@ Response:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /users/all`|
+|Endpoint|`GET /users/all`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all)|
 |Parameters|none|
 |Response|*message* - a welcome message, depending on whether the requestor has isAdmin: true or false; Returns a JSON object with an array of all user objects in the User collection. Note: passwordHashes are not returned in the array.|
@@ -248,7 +258,7 @@ Response:
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all
 ```
 
 Response:
@@ -282,7 +292,7 @@ Response:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /users/all/fullusers`|
+|Endpoint|`GET /users/all/fullusers`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/fullusers/`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/fullusers/)|
 |Parameters|none|
 |Response|Returns a JSON object with an array of all user objects in the User collection, where fullUser: true. Note: passwordHashes are not returned in the array.|
@@ -291,7 +301,7 @@ Response:
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/fullusers/
 ```
 
 Response:
@@ -324,7 +334,7 @@ Response:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /users/one/id/:id`|
+|Endpoint|`GET /users/one/id/:id`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/id/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/id/:id)|
 |Parameters|**URL Query** *:id* is the id of the User document to be returned; **Request body** none.|
 |Response|Returns a JSON object with the User document, with matching id. passwordHash is not returned.|
@@ -333,7 +343,7 @@ Response:
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/id/657d7c33d8b97e77efe01931
 ```
 
 Response:
@@ -363,7 +373,7 @@ Response:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /users/one/name/:first/:last`|
+|Endpoint|`GET /users/one/name/:first/:last`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/usersone/name/:first/:last`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/name/:first/:last)|
 |Parameters|**URL Query** *:first* is the full name.first within the desired User document - note this is not case sensitive; *:last*: is the full name.last within the desired user document - note this is not case sensitive; **Request body** none.|
 |Response|Returns a JSON object with one User document, with matching name.first AND name.second. passwordHash is not returned.|
@@ -372,7 +382,7 @@ Response:
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/usersone/name/nate/picone
 ```
 
 Response:
@@ -402,38 +412,253 @@ Response:
 
 |  |  |
 |--|--|
-|Endpoint:|`GET /users/search/:string`|
+|Endpoint|`GET /users/search/:string`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/:string`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/:string)|
-|Parameters|**URL Query** *:string* - `name.first` and `name.last` within  ; **Request body** none.|
-|Response|Returns a JSON object with one User document, with matching name.first AND name.second. passwordHash is not returned.|
+|Parameters|**URL Query** *:string* - is matched against `name.first` and `name.last` within the User documents, and matching documents are added to an array - note that the search string is case insensitive and, as applied, can only be a contiguous string without spaces; **Request body** none.|
+|Response|Returns a JSON object with User documents. passwordHash is not returned.|
 
 **Example**
 
 Request:
 ```
-
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/ar
 ```
 
 Response:
 
 ```
 {
-    "Users": {
-        "name": {
-            "first": "Nate",
-            "last": "Picone"
+    "Users": [
+        {
+            "name": {
+                "first": "Alex",
+                "last": "Greatbeard"
+            },
+            "_id": "657d7c33d8b97e77efe01942",
+            "email": "alex.greatbeard@yourcompany.com",
+            "businessUnit": "Pokemon Development",
+            "lineManagerId": "657d7c33d8b97e77efe01939",
+            "userTagLine": "One more than eight tendos",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00068-348350141.png",
+            "isFullUser": true,
+            "isLineManager": false,
+            "isSeniorManager": false,
+            "isAdmin": false,
+            "upn": "alex.greatbeard",
+            "__v": 0
         },
-        "_id": "657d7c33d8b97e77efe01931",
-        "email": "nate.picone@yourcompany.com",
+        {
+            "name": {
+                "first": "Carolina",
+                "last": "Reaper"
+            },
+            "_id": "657d7c34d8b97e77efe01945",
+            "email": "carolina.reaper@yourcompany.com",
+            "businessUnit": "Business Services",
+            "lineManagerId": "6580eb56bfd09ef5a5f9ebdd",
+            "userTagLine": "It's a bit chilly in here",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00033-2773725908.png",
+            "isFullUser": true,
+            "isLineManager": true,
+            "isSeniorManager": true,
+            "isAdmin": false,
+            "upn": "carolina.reaper",
+            "__v": 0
+        },
+        {
+            "name": {
+                "first": "Sally",
+                "last": "Superstar"
+            },
+            "_id": "65801d0c388ed1fa5e929dfd",
+            "email": "sally.superstar@yourcompany.com",
+            "businessUnit": "Business Services",
+            "lineManagerId": "657d7c34d8b97e77efe01945",
+            "userTagLine": "I aim for a little better than average",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00080-1412353387.png",
+            "isFullUser": true,
+            "isLineManager": false,
+            "isSeniorManager": false,
+            "isAdmin": false,
+            "__v": 0
+        }
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /users/all/manager/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/manager/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/manager/:id)|
+|Parameters|**URL Query** *:id* is the id of lineManager, within the User documents to be returned - matched documents are added to an array; **Request body** none.|
+|Response|Returns a JSON object with an array of User documents, with matching lineManager id. passwordHash is not returned.|
+|Note|Authentication restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/manager/657d7c33d8b97e77efe01939
+```
+
+Response:
+
+```
+{
+    "User": [
+        {
+            "name": {
+                "first": "Ed",
+                "last": "Dougherty"
+            },
+            "_id": "657d7c33d8b97e77efe01935",
+            "email": "ed.dougherty@yourcompany.com",
+            "businessUnit": "Business Services",
+            "lineManagerId": "657d7c33d8b97e77efe01939",
+            "userTagLine": "The tulips!",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00058-960922821.png",
+            "isFullUser": true,
+            "isLineManager": true,
+            "isSeniorManager": false,
+            "isAdmin": false,
+            "upn": "ed.dougherty",
+            "__v": 0
+        },
+        {
+            "name": {
+                "first": "Alex",
+                "last": "Greatbeard"
+            },
+            "_id": "657d7c33d8b97e77efe01942",
+            "email": "alex.greatbeard@yourcompany.com",
+            "businessUnit": "Pokemon Development",
+            "lineManagerId": "657d7c33d8b97e77efe01939",
+            "userTagLine": "One more than eight tendos",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00068-348350141.png",
+            "isFullUser": true,
+            "isLineManager": false,
+            "isSeniorManager": false,
+            "isAdmin": false,
+            "upn": "alex.greatbeard",
+            "__v": 0
+        }
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /users/one/:email`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/:email`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/:email)|
+|Parameters|**URL Query** *:email* - is matched against `email` within the User documents, and one matching document is returned- note that the search string is case insensitive; **Request body** none.|
+|Response|Returns a JSON object with User documents. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/alex.greatbeard@yourcompany.com
+```
+
+Response:
+
+```
+{
+    "Users": [
+        {
+            "name": {
+                "first": "Alex",
+                "last": "Greatbeard"
+            },
+            "_id": "657d7c33d8b97e77efe01942",
+            "email": "alex.greatbeard@yourcompany.com",
+            "businessUnit": "Pokemon Development",
+            "lineManagerId": "657d7c33d8b97e77efe01939",
+            "userTagLine": "One more than eight tendos",
+            "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00068-348350141.png",
+            "isFullUser": true,
+            "isLineManager": false,
+            "isSeniorManager": false,
+            "isAdmin": false,
+            "upn": "alex.greatbeard",
+            "__v": 0
+        },
+        //... more document objects
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`POST /users/new`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new)|
+|Parameters|**Request body** key value pairs that make up the user document, see table below|
+|Response|Returns a JSON object with User documents. passwordHash is not returned.|
+|Note|Authentication restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
+
+
+> [!NOTE] Valid key/value pairs for creating a new record:
+
+|Key|Value|
+|--|--|
+|name|object, required|
+| .first|string, required, min:2, max:60|
+| .last|string, required, min:2, max:60|
+|email|string, required, email validation, lowercase applied|
+|businessUnit|string, required, min:2, max:60|
+|passwordHash|string, required, min:8, max:120|
+|lineManagerId|string, required|
+|userTagline|string|
+|isFullUser|boolean, required, default:false|
+|isLineManager|boolean, required, default:false|
+|isSeniorManager|boolean, required, default:false|
+|isAdmin|boolean, required, default:false|
+
+
+**Example**
+
+Request:
+```
+POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new
+
+REQUEST BODY
+
+{
+    "name": {
+        "first": "Georgia",
+        "last": "Wyoming"
+    },
+    "email": "georgia.wyoming@yourcompany.com",
+    "businessUnit": "Business Services",
+    "lineManagerId": "657d7c34d8b97e77efe01945",
+    "userTagLine": "I'm new here. So excited!",
+    "userPhotoKey": "replacewithURL",
+    "isFullUser": true,
+    "isLineManager": false,
+    "isSeniorManager": false,
+    "isAdmin": false
+}
+```
+
+Response:
+
+```
+{
+    "User": {
+        "email": "georgia.wyoming@yourcompany.com",
+        "name": {
+            "first": "Georgia",
+            "last": "Wyoming"
+        },
         "businessUnit": "Business Services",
-        "lineManagerId": "657d7c33d8b97e77efe01935",
-        "userTagLine": "Tell me you access woes and I will disappear them.",
-        "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00109-3081462005.png",
+        "lineManagerId": "657d7c34d8b97e77efe01945",
+        "userTagLine": "I'm new here. So excited!",
+        "userPhotoKey": "replacewithURL",
         "isFullUser": true,
         "isLineManager": false,
         "isSeniorManager": false,
         "isAdmin": false,
-        "upn": "nate.picone",
+        "_id": "65875811253eeecd52862523",
         "__v": 0
     }
 }
