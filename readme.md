@@ -594,7 +594,7 @@ Response:
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new)|
 |Parameters|**Request body** key value pairs that make up the user document, see table below|
 |Response|Returns a JSON object with User documents. passwordHash is not returned.|
-|Note|Authentication restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
+|Note|Authorisation restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
 
 
 > [!NOTE] Valid key/value pairs for creating a new record:
@@ -663,6 +663,179 @@ Response:
     }
 }
 ```
+
+|  |  |
+|--|--|
+|Endpoint|`PATCH /users/update/self/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned this is then checked against the user id provided through the JWT token, as an additional check before documents are updated; **Request body** userTagline is currently the only field updatable by users.|
+|Response|Returns a JSON object with User document. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/657d7c33d8b97e77efe01931
+
+REQUEST BODY
+
+{
+    "userTagLine": "I'm not new here any more. Still excited!"
+}
+
+```
+
+Response:
+
+```
+{
+    "name": {
+        "first": "Nate",
+        "last": "Picone"
+    },
+    "_id": "657d7c33d8b97e77efe01931",
+    "email": "nate.picone@yourcompany.com",
+    "businessUnit": "Business Services",
+    "lineManagerId": "657d7c33d8b97e77efe01935",
+    "userTagLine": "I'm not new here any more. Still excited!",
+    "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00109-3081462005.png",
+    "isFullUser": true,
+    "isLineManager": false,
+    "isSeniorManager": false,
+    "isAdmin": true,
+    "upn": "nate.picone",
+    "__v": 0
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`PATCH /users/update/self/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned this is then checked against the user id provided through the JWT token, as an additional check before documents are updated; **Request body** userTagline is currently the only field updatable by users.|
+|Response|Returns a JSON object with User document. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/657d7c33d8b97e77efe01931
+
+REQUEST BODY
+
+{
+    "userTagLine": "I'm not new here any more. Still excited!"
+}
+
+```
+
+Response:
+
+```
+{
+    "name": {
+        "first": "Nate",
+        "last": "Picone"
+    },
+    "_id": "657d7c33d8b97e77efe01931",
+    "email": "nate.picone@yourcompany.com",
+    "businessUnit": "Business Services",
+    "lineManagerId": "657d7c33d8b97e77efe01935",
+    "userTagLine": "I'm not new here any more. Still excited!",
+    "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00109-3081462005.png",
+    "isFullUser": true,
+    "isLineManager": false,
+    "isSeniorManager": false,
+    "isAdmin": true,
+    "upn": "nate.picone",
+    "__v": 0
+}
+```
+
+
+|  |  |
+|--|--|
+|Endpoint|`PATCH /users/update/admin/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/admin/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/admin/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned. **Request body** *name.first* string, optional; *name.first* string, optional; *email* string, optional; *businessUnit* string, optional; *LineManagerId* string, optional; *userTagLine* string, optional; *userPhotoKey* string, optional; *isFullUser* boolean, optional; *isLineManager* boolean, optional; *isSeniorManager* boolean, optional; *isAdmin* boolean, optional. Value validation also applies.|
+|Response|Returns a JSON object with User document. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/admin/657d7c33d8b97e77efe01931
+
+REQUEST BODY
+
+{
+    "isLineManager": true
+}
+
+```
+
+Response:
+
+```
+{
+    "name": {
+        "first": "Nate",
+        "last": "Picone"
+    },
+    "_id": "657d7c33d8b97e77efe01931",
+    "email": "nate.picone@yourcompany.com",
+    "businessUnit": "Business Services",
+    "lineManagerId": "657d7c33d8b97e77efe01935",
+    "userTagLine": "I'm not new here any more. Still excited!",
+    "userPhotoKey": "https://storage.googleapis.com/weppreciate-store/profile/00109-3081462005.png",
+    "isFullUser": true,
+    "isLineManager": true,
+    "isSeniorManager": false,
+    "isAdmin": true,
+    "upn": "nate.picone",
+    "__v": 0
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`DELETE /users/delete/admin/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/delete/admin/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/admin/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned and deleted. **Request body** none|
+|Response|Returns a JSON object with User document. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/delete/admin/65875811253eeecd52862523
+```
+
+Response:
+
+```
+{
+    "User": {
+        "name": {
+            "first": "Georgia",
+            "last": "Wyoming"
+        },
+        "_id": "65875811253eeecd52862523",
+        "email": "georgia.wyoming@yourcompany.com",
+        "businessUnit": "Business Services",
+        "lineManagerId": "657d7c34d8b97e77efe01945",
+        "userTagLine": "I'm new here. So excited!",
+        "userPhotoKey": "replacewithURL",
+        "isFullUser": true,
+        "isLineManager": false,
+        "isSeniorManager": false,
+        "isAdmin": false,
+        "__v": 0
+    }
+}
+```
+
+
 
 
 ## R6 Deploy the application to a cloud hosting service
