@@ -1371,9 +1371,259 @@ Response:
 }
 ```
 
-
-
 #### /comments
+
+|  |  |
+|--|--|
+|Endpoint|`GET /comments/all`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all)|
+|Parameters|none|
+|Response|Returns an array of all document objects in the Comments collection.|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all
+```
+
+Response:
+
+```
+[
+    {
+        "_id": "6580a58f14332fff07a04c76",
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "657d7c33d8b97e77efe01931",
+        "commentBody": "Nice work Katie!",
+        "__v": 0,
+        "commentDate": "2023-12-24T02:39:17.361Z"
+    },
+    {
+        "_id": "6580a58f14332fff07a04c75",
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "657d7c33d8b97e77efe01935",
+        "commentBody": "Nice work Katie!",
+        "__v": 0,
+        "commentDate": "2023-12-24T02:39:17.362Z"
+    },
+    // ... more document objects
+]
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /comments/all/nomination/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/:id)|
+|Parameters|**URL Query** *:id* is the Nomination id. It is used to retreive all comments linked to the nomination|
+|Response|Returns an array of all Comment objects linked to the provided Nomination.|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/657d7c34d8b97e77efe01955
+```
+
+Response:
+
+```
+[
+    {
+        "_id": "6580a58f14332fff07a04c76",
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "657d7c33d8b97e77efe01931",
+        "commentBody": "Nice work Katie!",
+        "__v": 0,
+        "commentDate": "2023-12-24T02:48:38.967Z"
+    },
+    {
+        "_id": "6580a58f14332fff07a04c75",
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "657d7c33d8b97e77efe01935",
+        "commentBody": "Nice work Katie!",
+        "__v": 0,
+        "commentDate": "2023-12-24T02:48:38.968Z"
+    }
+]
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /one/nomination/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/:id)|
+|Parameters|**URL Query** *:id* is the Comment id. It is used to retreive one comments, with the id specified.|
+|Response|Returns an object of the Comment objects with id provided in the URL.|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/6580a58f14332fff07a04c76
+```
+
+Response:
+
+```
+{
+    "_id": "6580a58f14332fff07a04c76",
+    "nominationId": "657d7c34d8b97e77efe01955",
+    "commenterId": "657d7c33d8b97e77efe01931",
+    "commentBody": "Nice work Katie!",
+    "__v": 0,
+    "commentDate": "2023-12-24T02:50:59.002Z"
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /all/user/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/:id)|
+|Parameters|**URL Query** *:id* is the `commenterId`, which matches the User id. It is used to retreive all comments comments, with the id specified.|
+|Response|Returns an array of all Comment objects created by the user, with id provided in the URL.|
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/657d7c33d8b97e77efe01931
+```
+
+Response:
+
+```
+[
+    {
+        "_id": "6580a58f14332fff07a04c76",
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "657d7c33d8b97e77efe01931",
+        "commentBody": "Nice work Katie!",
+        "__v": 0,
+        "commentDate": "2023-12-24T02:54:13.847Z"
+    },
+    {
+        "_id": "65875c67dfb25e55787c5a7c",
+        "nominationId": "6583bb80d035032876b04baf",
+        "commenterId": "657d7c33d8b97e77efe01931",
+        "commentBody": "Well done, Ed!",
+        "commentDate": "2023-12-23T22:17:11.729Z",
+        "__v": 0
+    }
+]
+```
+
+|  |  |
+|--|--|
+|Endpoint|`POST /post/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/post/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/post/:id)|
+|Parameters|**URL Query** *:id* is the id of the Nomination document, allowing a comment to be linked to the Nomination document the user is commenting on. **Request body** *nominationId* the id of the document in the Nomination collection; *commenterId* is the ID of the account creating the comment; *commentBody* the text of the comment; *commentDate* the date the comment was left|
+|Response|Returns the object of the comment linked to the Nomination document. |
+
+> [!NOTE] Valid key/value pairs for creating a new record:
+
+|Key|Value|
+|--|--|
+|nominationId|string, required|
+|commenterId|string, required|
+|commentBody|string, required|
+|commentDate|date, required, format 'D-MM-YYYY'|
+
+**Example**
+
+Request:
+```
+POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/post/657d7c34d8b97e77efe01955
+
+REQUEST BODY
+
+{
+    "nominationId": "657d7c34d8b97e77efe01955",
+    "commenterId": "658760dc985de4ddc824dbd6",
+    "commentBody": "Nice work Katie!",
+    "commentDate": "24-12-2023"
+}
+```
+
+Response:
+
+```
+{
+    "Comment": {
+        "nominationId": "657d7c34d8b97e77efe01955",
+        "commenterId": "658760dc985de4ddc824dbd6",
+        "commentBody": "Nice work Katie!",
+        "commentDate": "24-12-2023",
+        "_id": "6587ab356f7308138926be17",
+        "__v": 0
+    }
+}
+```
+
+
+|  |  |
+|--|--|
+|Endpoint|`PATCH /update/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/update/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/update/:id)|
+|Parameters|**URL Query** id of the comment record to be updated. **Request body** *commentBody* the updated comment body|
+|Response|Returns the object of the comment linked to the Nomination document, after updating. |
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/update/65875c67dfb25e55787c5a7c
+
+REQUEST BODY
+
+{
+    "commentBody": "Kicking goals!"
+}
+```
+
+Response:
+
+```
+{
+    "Comment": {
+        "_id": "65878a87c3b522e42ebe9b76",
+        "nominationId": "65878a68c3b522e42ebe9b68",
+        "commenterId": "657d7c33d8b97e77efe0193c",
+        "commentBody": "Kicking goals!",
+        "commentDate": "Sun Dec 24 2023 11:33:59 GMT+1000 (GMT+10:00)",
+        "__v": 0
+    }
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`DELETE /delete/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/delete/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/delete/:id)|
+|Parameters|**URL Query** id of the comment record to be updated. **Request body** none|
+|Response|Returns the object of the comment linked to the Nomination document, after updating. |
+
+**Example**
+
+Request:
+```
+DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/delete/6587bf16cbd9348c16ac0f42
+```
+
+Response:
+
+```
+{
+    "Comment": {
+        "_id": "6587bf16cbd9348c16ac0f42",
+        "nominationId": "65878a68c3b522e42ebe9b68",
+        "commenterId": "658760dc985de4ddc824dbd6",
+        "commentBody": "Fire!",
+        "commentDate": "24-12-2023",
+        "__v": 0
+    }
+}
+```
+
 
 
 ## R6 Deploy the application to a cloud hosting service
