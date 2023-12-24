@@ -808,7 +808,7 @@ Response:
 
 Request:
 ```
-PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/delete/admin/65875811253eeecd52862523
+DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/delete/admin/65875811253eeecd52862523
 ```
 
 Response:
@@ -835,7 +835,545 @@ Response:
 }
 ```
 
+#### /nominations
 
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/all`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all)|
+|Parameters|*message* - Returns a JSON object with an array of all Nomination objects in the User collection. |
+|Response||
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all
+```
+
+Response:
+
+```
+{
+    "Nominations": [
+        {
+            "_id": "657d7c34d8b97e77efe0194c",
+            "recipientUser": "657d7c33d8b97e77efe01931",
+            "nominatorFullUser": "657d7c33d8b97e77efe01935",
+            "nominationValue": [
+                "Commitment"
+            ],
+            "nominationBody": "Nate is a great guy!",
+            "nominationDate": "09-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": null,
+            "__v": 0
+        },
+        // ... more document objects
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/all/recipient/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/recipient/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/recipient/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the Nominations documents, and an array of all matching documents is returned. **Request body** none|
+|Response| |
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/recipient/657d7c33d8b97e77efe01935
+```
+
+Response:
+
+```
+{
+    "Nominations": [
+        {
+            "_id": "657d7c34d8b97e77efe0194f",
+            "recipientUser": "657d7c33d8b97e77efe01935",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Commitment"
+            ],
+            "nominationBody": "Ed is also a great guy!",
+            "nominationDate": "02-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": null,
+            "__v": 0
+        },
+        {
+            "nominatorBasicUser": {
+                "basicName": {
+                    "first": "Naomi",
+                    "last": "SkyCaptain"
+                },
+                "basicEmail": "naomi.skycaptain@yourcompany.com"
+            },
+            "_id": "657d7c34d8b97e77efe01952",
+            "recipientUser": "657d7c33d8b97e77efe01935",
+            "nominatorFullUser": null,
+            "nominationValue": [
+                "Challenging"
+            ],
+            "nominationBody": "Ed is a challenger!",
+            "nominationDate": "10-12-2023",
+            "isNominatorFullUser": false,
+            "isNominationInstant": false,
+            "isAward": true,
+            "isReleased": true,
+            "releaseDate": "21-12-2023",
+            "__v": 0
+        },
+        //... more document objects
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/all/nominator/:firstName/:lastName`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/:firstName/:lastName`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/:firstName/:lastName)|
+|Parameters|**URL Query** *:firstName* - is matched against `name.first` within the User documents, *:lastName* is matched against `name.last` in the User documents, to return the ID of the nominator, which is then matched against nominatorFullUser Nomination documents. If no matching `User.name` is found, the same values are used to match against `nominatorBasicUser.basicName` in the Nominations collection, and an array of all matching Nomination documents is returned. **Request body** none |
+|Response||
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/katie/lock
+```
+
+Response:
+
+```
+{
+    "Nominations": [
+        {
+            "_id": "657d7c34d8b97e77efe0194f",
+            "recipientUser": "657d7c33d8b97e77efe01935",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Commitment"
+            ],
+            "nominationBody": "Ed is also a great guy!",
+            "nominationDate": "02-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": null,
+            "__v": 0
+        },
+        {
+            "_id": "657e8472642ef3da540d1b6b",
+            "recipientUser": "657d7c33d8b97e77efe01931",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Spirited"
+            ],
+            "nominationBody": "Nate is the only reason I will pass this assignment. Bless his soul. Give him ice cream.",
+            "nominationDate": "16-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": "16-12-2023",
+            "__v": 0
+        },
+        // ... more document objects
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/page/:page`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/page/:page`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/page/:page)|
+|Parameters|**URL Query** *:page* - returns all nominations, in descending sumbission date order, in a pagenation format, with 20 items per page. **Request body** none |
+|Response||
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/page/1
+```
+
+Response:
+
+```
+{
+    "Nominations": [
+        {
+            "_id": "6584e35ee2c8545acd85faaf",
+            "recipientUser": "6580eb56bfd09ef5a5f9ebdd",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Spirited"
+            ],
+            "nominationBody": "Being a great leader",
+            "nominationDate": "22-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": false,
+            "isAward": true,
+            "isReleased": true,
+            "__v": 0,
+            "releaseDate": "22-12-2023"
+        },
+        {
+            "_id": "6583fcd6e2c8545acd85f7bb",
+            "recipientUser": "657d7c33d8b97e77efe01931",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Collaborate"
+            ],
+            "nominationBody": "Great teamwork",
+            "nominationDate": "21-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": "21-12-2023",
+            "__v": 0
+        },
+        // ... more document objects
+    ]
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/one/nominator/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nominator/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/one/nominator/:id)|
+|Parameters|**URL Query** *:id* - returns most recent nomination raised by the nominator's id provided. **Request body** none|
+|Response| |
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nominator/657d7c33d8b97e77efe0193c
+```
+
+Response:
+
+```
+{
+    "Nominations": {
+        "_id": "657d7c34d8b97e77efe0194f",
+        "recipientUser": "657d7c33d8b97e77efe01935",
+        "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+        "nominationValue": [
+            "Commitment"
+        ],
+        "nominationBody": "Ed is also a great guy!",
+        "nominationDate": "02-12-2023",
+        "isNominatorFullUser": true,
+        "isNominationInstant": true,
+        "isAward": false,
+        "isReleased": false,
+        "releaseDate": null,
+        "__v": 0
+    }
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/all/nominator/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/:id)|
+|Parameters|**URL Query** *:page* - returns all nominations, raised by the nominator's id provided. **Request body** none |
+|Response||
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/:id
+```
+
+Response:
+
+```
+{
+    "Nominations": [
+        {
+            "_id": "657d7c34d8b97e77efe0194f",
+            "recipientUser": "657d7c33d8b97e77efe01935",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Commitment"
+            ],
+            "nominationBody": "Ed is also a great guy!",
+            "nominationDate": "02-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": null,
+            "__v": 0
+        },
+        {
+            "_id": "657e8472642ef3da540d1b6b",
+            "recipientUser": "657d7c33d8b97e77efe01931",
+            "nominatorFullUser": "657d7c33d8b97e77efe0193c",
+            "nominationValue": [
+                "Spirited"
+            ],
+            "nominationBody": "Bless his soul. Give him ice cream.",
+            "nominationDate": "16-12-2023",
+            "isNominatorFullUser": true,
+            "isNominationInstant": true,
+            "isAward": false,
+            "isReleased": false,
+            "releaseDate": "16-12-2023",
+            "__v": 0
+        },
+        // ... more document objects
+    ]
+}
+```
+
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/one/recipient/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/recipient/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/one/recipient/:id)|
+|Parameters|**URL Query** *:id* - returns the recent nomination raised to the recipient's id provided. **Request body** none|
+|Response| |
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/recipient/657d7c33d8b97e77efe0193c
+```
+
+Response:
+
+```
+{
+    "Nominations": {
+        "_id": "657d7c34d8b97e77efe01955",
+        "recipientUser": "657d7c33d8b97e77efe0193c",
+        "nominatorFullUser": "657d7c33d8b97e77efe01935",
+        "nominationValue": [
+            "Commitment"
+        ],
+        "nominationBody": "Katie deserves this because of the thing what she did at the time.",
+        "nominationDate": "02-11-2023",
+        "isNominatorFullUser": true,
+        "isNominationInstant": true,
+        "isAward": true,
+        "isReleased": true,
+        "releaseDate": null,
+        "__v": 0
+    }
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`GET /nominations/one/nomination/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nomination/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nomination/:id)|
+|Parameters|**URL Query** *:id* - returns the Nomination document object with ID specified in the URL. **Request body** none|
+|Response| |
+
+**Example**
+
+Request:
+```
+GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nomination/657d7c34d8b97e77efe01955
+```
+
+Response:
+
+```
+{
+    "Nominations": {
+        "_id": "657d7c34d8b97e77efe01955",
+        "recipientUser": "657d7c33d8b97e77efe0193c",
+        "nominatorFullUser": "657d7c33d8b97e77efe01935",
+        "nominationValue": [
+            "Commitment"
+        ],
+        "nominationBody": "Katie deserves this because of the thing what she did at the time.",
+        "nominationDate": "02-11-2023",
+        "isNominatorFullUser": true,
+        "isNominationInstant": true,
+        "isAward": true,
+        "isReleased": true,
+        "releaseDate": null,
+        "__v": 0
+    }
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`POST /nominations/new`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/new`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/new)|
+|Parameters|**Request body** key/value pairs, as described in the below table|
+|Response|A JSON object with the new Nomination document, including values provided in the request, along with *_id* for the nomination id.|
+
+> [!NOTE] Valid key/value pairs for creating a new record:
+
+|Key|Value|Description|
+|--|--|--|
+|recipientUser|string, required|The ID of the person receiving the recognition|
+|nomintaorFullUser|string, optional|The ID of the person submitting the recognition, if a full user|
+|NominatorBasicUser|object, optional|Used where the person submitting is not a full user|
+|.basicName|object, optional|Object consisting of .first and .last|
+|.first|string, optional|Non-full user's first name|
+|.last|string, optional|Non-full user's last name|
+|.basicEmail|string, optional|Non-full-user's email address|
+|nominationValue|string, required|Corporate value for which the behaviour is being recognised; predefined list|
+|nominationBody|string, required|Reason for recognition. Cannot be blank|
+|nominationDate|string, required, D-MM-YYYY format|Date the recognition was submitted|
+|isNominatorFullUser|boolean, required, default:false|true is the user is a full user of the application|
+|isNominationInstant|boolean, required, default:false|true if the recognition is instant; false if recognition is a nomination for an official award|
+|isAward|boolean, required, default:false|true, where the Senior Manager has promoted the nomination to an award|
+|isReleased|boolean, required, default:false|true, where the Senior Manager released the nominations and award winner posts to users' ddashboards|
+|releaseDate|string, optional, allow null|captures the date the recognition is released to dashboards|
+
+**Example**
+
+Request:
+```
+POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/new
+
+REQUEST BODY
+
+{
+    "recipientUser": "657d7c33d8b97e77efe0193c",
+    "nominatorFullUser": "657d7c33d8b97e77efe01935",
+    "nominationValue": "Commitment",
+    "nominationBody": "Katie has perseverence and fortitude.",
+    "nominationDate": "24-12-2023",
+    "isNominatorFullUser": true,
+    "isNominationInstant": true,
+    "isAward": false,
+    "isReleased": true,
+    "releaseDate": "24-12-2023"
+}
+```
+
+Response:
+
+```
+{
+    "Nomination": {
+        "recipientUser": "657d7c33d8b97e77efe0193c",
+        "nominatorFullUser": "657d7c33d8b97e77efe01935",
+        "nominationValue": [
+            "Commitment"
+        ],
+        "nominationBody": "Katie has perseverence and fortitude.",
+        "nominationDate": "24-12-2023",
+        "isNominatorFullUser": true,
+        "isNominationInstant": true,
+        "isAward": false,
+        "isReleased": true,
+        "releaseDate": "24-12-2023",
+        "_id": "65878017c3b522e42ebe9ad8",
+        "__v": 0
+    }
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`PATCH /nominations/update/nom/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/update/nom/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/update/nom/:id)|
+|Parameters|**URL Query** *:id* - finds the Nomination document object with ID specified in the URL. **Request body** the fields requiring an state change, but is restricted to: *nominationId* legacy code and is optional - id is already provided in URL query; *isAward* boolean, optional; *isReleased* boolean, optional; *releaseDate* string in D-MM-YYYY format|
+|Response|A JSON object with the updated Nomination. |
+
+**Example**
+
+Request:
+```
+PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/update/nom/65878017c3b522e42ebe9ad8
+
+REQUEST BODY
+{
+    "isAward": true,
+    "isReleased": true,
+    "releaseDate": "24-12-2023"
+}
+```
+
+Response:
+
+```
+{
+    "_id": "65878017c3b522e42ebe9ad8",
+    "recipientUser": "657d7c33d8b97e77efe0193c",
+    "nominatorFullUser": "657d7c33d8b97e77efe01935",
+    "nominationValue": [
+        "Commitment"
+    ],
+    "nominationBody": "Katie has perseverence and fortitude.",
+    "nominationDate": "24-12-2023",
+    "isNominatorFullUser": true,
+    "isNominationInstant": true,
+    "isAward": true,
+    "isReleased": true,
+    "releaseDate": "24-12-2023",
+    "__v": 0
+}
+```
+
+|  |  |
+|--|--|
+|Endpoint|`DELETE /nominations/delete/:id`|
+|Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/delete/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/delete/:id)|
+|Parameters|**URL Query** *:id* - is matched against `id` within the Nomination documents, and one matching document is returned and deleted. **Request body** none|
+|Response|Returns a JSON object with Nomination document. passwordHash is not returned.|
+
+**Example**
+
+Request:
+```
+DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/delete/65878017c3b522e42ebe9ad8
+```
+
+Response:
+
+```
+{
+    "Nominations": {
+        "_id": "65878017c3b522e42ebe9ad8",
+        "recipientUser": "657d7c33d8b97e77efe0193c",
+        "nominatorFullUser": "657d7c33d8b97e77efe01935",
+        "nominationValue": [
+            "Commitment"
+        ],
+        "nominationBody": "Katie has perseverence and fortitude.",
+        "nominationDate": "24-12-2023",
+        "isNominatorFullUser": true,
+        "isNominationInstant": true,
+        "isAward": true,
+        "isReleased": true,
+        "releaseDate": "24-12-2023",
+        "__v": 0
+    }
+}
+```
+
+
+
+#### /comments
 
 
 ## R6 Deploy the application to a cloud hosting service
