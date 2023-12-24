@@ -23,53 +23,76 @@ We used the following packages, frameworks and technology:
 
 ### Backend
 
-#### Node
+#### Node.js
 
+Used for all backend scripting
 
 #### npm
 
+Used for package installation and management 
 
 #### MongoDB
 
+Used as the sole database. Structure contains 4x collections (Users, Nominations, Values, Comments), with respective documents contained within.
 
-#### Express
+#### ExpressJS
 
+Used as the API router, handing endpoints and logic.
 
 #### Google Cloud Storage
 
+Profile photos and award category photos were upploaded to GCS, and given public URLs. We understand that in a commercial application this is not a desirable scenario. As the enterprise application would pull profile photos from Azure, through SAML SSO, and these profile pics were AI generated, there is no current privacy risk.
 
-#### bcrypt / bcryptjs
+#### bcrypt
 
+bcrypt has been deployed to handle salting and hashing of user passwords, in this case, applying the default 10 rounds of hashing. In the enterprise deployment, Azure SAML SSO is the security structure required by the client.
+
+Hased passwords are saved to User documents, to allow for comparison on routes where JWT is required to be supplied, confirming legitimate acceess to the endpoint.
 
 #### cors
 
+Cors was required to allow the front end on Netlify to communicate with the API, deployed to Heroku.
 
 #### dotenv
 
+dotenv allows sensitive variables, such as usersnames and passwords, to be obscured and saved to a .env file, then used as variables through the application.
 
-#### jasonwebtoken
+#### jsonwebtoken
 
+JWT was deployed to assign and decrypt user tokens, to confirm legitimate access to the application. In this case, the token validity was set to 7 days, which is well above the recommended validity. This was to allow for uninterrupted client UAT, and further development, prior to potential enterprise deployment.
+
+Given the pending change to security used by the application, and the lack of real data, we decided to take this approach. If actual user data were to be included int eh application, we would shorten the token validity to something like 24 hours, and add a refresh token, to allow for automatic token refreshing.
 
 #### mongoose
 
+mongoose creates the schema, or data structure, used for the mongo database. This allows consistency across documents in the database.
 
 #### nodemon
 
+Added to the dev environment to resume the local development server, after errors. An essential part of the development process.
 
 #### joi
-`joi` and `joi/date`
+
+`joi` was added for input validation and extended with `joi/date`. Used for most of this API's POST and PATCH routes, Joi creates an additional schema to Mongoose's, and allows for clearer repsonses where data formatting is not consistent with the needs of the database.
 
 #### jest
 
+Jest was deployed for testing. Limited unit testing has been applied to the API, as most testing was manual.
 
 #### supertest
 
+Super test allows for additional testing functionality.
 
 ### Frontend
 
 
-## 2 Write well designed code
+## R2 Write well designed code
 
+---
+
+Obviously, our code is stunning.
+
+---
 
 
 ## R3 Employ and utilise proper source control methodology (git)
