@@ -1783,12 +1783,16 @@ Response:
 
 ## R6 Deploy the application to a cloud hosting service
 
-### API
 [The API was deployed to Heroku here](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/)
 
-The Database was deployed to Atlas on mongodb.com
+![Screenshot of Heroku deployment, with logs showing activity](./docs/heroku-logs.jpg)
+
+The Database was deployed to Atlas on mongodb.com:
+![Screenshot of Atlas GUI on mongodb.com](./docs/atlas-mongobd.jpg)
 
 [The front end was deployed to Netlify](https://playful-pudding-8faa4e.netlify.app/)
+
+![Screenshot of Netlify deploy logs](./docs/netlify-deploy-logs.jpg)
 
 ## R7 Produce an application with an intuitive user interface
 
@@ -1807,7 +1811,12 @@ The feedback allowed some changes to me made in response to the testing conducte
 ![Email from client, after user testing](./docs/client-UAT.jpg)
 
 ### Front end user testing
-Frontend user testing was exported from Notion, and is viewable as a PDF
+Frontend user testing was exported from Notion, and is viewable as a PDF [here]
+
+Screenshots of testing results are also saved in this submission, to `../docs/frontend-user-testing-screenshots/` with the filenames matching the test ID number (ie FE-UT-18.png).
+
+Also viewable on Notion:
+![Screenshot of frontend testing page on Notion](./docs/notion-frontend-testing.jpg) at this [URL](https://weppreciate.notion.site/Front-end-manual-testing-5a8b5cf1876b406ba9e167af397996cd?pvs=4)
 
 ### Back end user testing
 Backend user testing was exported from Notion, and is viewable as a PDF [here](./docs/backend-user-testing/backend-user-testing.pdf).
@@ -1815,11 +1824,10 @@ Backend user testing was exported from Notion, and is viewable as a PDF [here](.
 Screenshots of the Postman results are also saved in this submission, to `../backend-user-testing/backend-testing-screenshots/` with the filenames matching the test ID number (ie UT-1.png).
 
 Also viewable on Notion:
-![Screenshot of backend testing page on Notion](./docs/notion-backend-testing.jpg)
+![Screenshot of backend testing page on Notion](./docs/notion-backend-testing.jpg) at this [URL](https://weppreciate.notion.site/Backend-testing-b66ded2a07984aff8566a682a2d77f39?pvs=4)
 
 
 ## R9 Utilises a formal testing framework
 
 ### Front end testing
 
-### Back end testing
