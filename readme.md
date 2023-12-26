@@ -210,7 +210,7 @@ We continued utilising Standup Meeting records, Task delegation updating and con
 
 ### Use a recognised task delegation methodology
 
-The allocation of tasks were essentially split into two groupings: the back end plus databases, and the front end plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his front end skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
+The allocation of tasks were essentially split into two groupings: the backend plus databases, and the frontend plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his frontend skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
 
 We continued the path we laid down in Part-A, with dividing the entire project into six sub-projects:
 
