@@ -112,9 +112,9 @@ MUI (formerly known as Material UI) is a React design system. MUI components wer
 
 jwt-decode was used as part of the authentication provider, to check whether a JWT token stored in local storage was still valid - and redirecting the user to login if it had expired/was invalid.
 
-#### axios
+#### jest
 
-Axios was used as an alternate to `fetch` when making some API requests. The key benefit of this was automatic JSON data conversion, making code more efficient when data was returned from an API request.
+Jest was deployed for testing. Limited unit testing has been applied to the API, as most testing was manual.
 
 ## R2 Write well designed code
 
@@ -153,11 +153,11 @@ Screenshots of our workspace at the end of each sprint:
 
 ![Projects at the end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/project-end-sprint-2.jpg)
 
-![Sprint taskboard end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/sprint-board-end-wk-2.jpg)
+![Sprint task board end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/sprint-board-end-wk-2.jpg)
 
-![Standup 1 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-1-wk-2.jpg)
+![Stand-up 1 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-1-wk-2.jpg)
 
-![Standup 2 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-2-wk-2.jpg)
+![Stand-up 2 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-2-wk-2.jpg)
 
 ![Task timeline, end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/task-timeline-end-wk-2.jpg)
 
@@ -169,11 +169,11 @@ Screenshots of our workspace at the end of each sprint:
 
 ![Projects at the end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/projects-end-sprint-3.jpg)
 
-![Sprint taskboard end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/sprint-board-end-wk-3.jpg)
+![Sprint task board end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/sprint-board-end-wk-3.jpg)
 
-![Standup 1 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-1-wk-3.jpg)
+![Stand-up 1 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-1-wk-3.jpg)
 
-![Standup 2 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-2-wk-3.jpg)
+![Stand-up 2 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-2-wk-3.jpg)
 
 ![Task timeline, end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/task-timeline-end-wk-3.jpg)
 
@@ -187,13 +187,13 @@ Screenshots of our workspace at the end of each sprint:
 
 ![Projects at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/project-end-sprint-4.jpg)
 
-![Sprint taskboard end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/sprint-board-end-wk-4.jpg)
+![Sprint task board end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/sprint-board-end-wk-4.jpg)
 
-![Standup 1 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-1-wk-4.jpg)
+![Stand-up 1 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-1-wk-4.jpg)
 
-![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-2-wk-4.jpg)
+![Stand-up 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-2-wk-4.jpg)
 
-![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-3-wk-4.jpg)
+![Stand-up 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-3-wk-4.jpg)
 
 ![Task timeline, end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/task-timeline-end-wk-4.jpg)
 
@@ -1789,7 +1789,7 @@ The Database was deployed to Atlas on mongodb.com:
 
 Included earlier, repeating the inclusion of the email. This was sent after completion of user testing.
 
-As noted, the client was on holiday, and driving from Melbourne to Western Australia, so her opporunities to test were limited, but we are greatful for the amount of testing she was able to do.
+As noted, the client was on holiday, and driving from Melbourne to Western Australia, so her opportunities to test were limited, but we are grateful for the amount of testing she was able to do.
 
 The feedback allowed some changes to me made in response to the testing conducted.
 
