@@ -118,18 +118,28 @@ Jest was deployed for testing. Limited unit testing has been applied to the API,
 
 ## R2 Write well designed code
 
+This assessment requirement specified the following:
+- Separates the program into modules that each deal with one particular focus, or concern
+- Demonstrates DRY (Don’t Repeat Yourself) coding principles
+- Uses appropriate libraries
+- Demonstrates good code flow control for user stories
+- Applies Object Oriented (OO) principles/patterns
+- Uses appropriate data structures
+
+We would like to think that we have done a reasonable job of achieving the above requirements within our time and ability constraints, but we are no experts. Therefore we will let you - our educators - decide on this one!
+
 ## R3 Employ and utilise proper source control methodology (git)
 
-Github desktop was used throughout, where an organisation was created, and four repos were created:
+GitHub desktop was used throughout, where an organisation was created, and four repos were created:
 
 1. Part A
 1. Part B backend
 1. Part B front end
 1. Part B readme
 
-A branch was always created, where work was required on Part-B front end or back end, keeping main free from direct development.
+For Part B backend and frontend, feature branches were created to actively work on - with no changes being permitted directly on main, and pull requests were required.
 
-For the application repos, we included an additional safety step, where branches could not be automatically merged into main, without the review and approval of the other. This kept us across changes being made by the other teammate, and allowed us to catch several potential issues before they became actual issues.
+We then included an additional rule within GitHub, where feature branches could not be automatically merged into main without the review and approval of the other. This kept us across changes being made by the other teammate, and allowed us to catch several potential issues before they became actual issues.
 
 ## R4 Demonstrate your ability to work in a team
 
@@ -1875,4 +1885,14 @@ Also viewable on Notion:
 
 ## R9 Utilises a formal testing framework
 
-### Front end testing
+Due to time constraints, our testing framework was not as comprehensive as we would have liked. We recognise in a real-world scenario that a larger amount of automated tests should be used in an application of this size.
+
+We conducted very comprehensive manual user testing of both the frontend and backend, as explained above in R8. This formal manual testing was conducted at the very end of our application development, to ensure that additional pull requests did not impact the outcome of the tests.
+
+Informal manual testing was also occurring constantly as we built our application, both in the development and production environments. This was done to give us the reassurance that our code was operating as expected, and that no further regression occurred with new updates.
+
+A small suite of automated tests were written for the frontend of the application using Jest:
+
+![Screenshot of Jest tests running in the development environment](./docs/jest-tests.png)
+
+As a large part of our application uses private routes that require authentication, this proved to be a challenge for writing Jest tests for a larger number of features. We felt confident that all features of our application were working as expected due the breadth of manual user testing - but in future we would have built more Jest tests earlier in the application development.
