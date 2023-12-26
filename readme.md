@@ -121,6 +121,8 @@ Obviously, our code is stunning.
 
 ## R3 Employ and utilise proper source control methodology (git)
 
+The code repositories for both the frontend and backend of our application used Git as the source control methodology, and GitHub as our software to implement and manage the source control of our code.
+
 
 
 ## R4 Demonstrate your ability to work in a team
@@ -137,7 +139,7 @@ Each sprint had three stand-ups scheduled, in addition to the communication carr
 
 ### Use a recognised task delegation methodology
 
-The allocation of tasks were essentially split into two groupings: the back end plus databases, and the front end plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his front end skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
+The allocation of tasks were essentially split into two groupings: the backend plus databases, and the frontend plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his frontend skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
 
 We continued the path we laid down in Part-A, with dividing the entire project into six sub-projects:
 
