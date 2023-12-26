@@ -107,13 +107,13 @@ We continued our application of Agile methedology throughout this project, keepi
 
 We elected to run 6 one-week sprints, and while we understand the regular timespan of a sprint to be two weeks, we felt one week allowed us to more comfortably pace our task delivery. In practise this meant most weeks had items that were incomplete and carried over, but we stand by the decision and the benefit it gave us through planning and development.
 
-Around Sprint 3 ( we started at sprint 0), we presented a [Client Pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4) for alignment and requirements sign off. While this ideally should have been completed earlier, and delivered through a meeting, the operational needs of the business meant the client was unavaiable, and our timing was a little behind schedule. We presented this in an email, inviting the client to review and respond with questions.
+Sprints were burned down, and at the end of each, a review took place to align on what was achieved and closed, what was delayed, and what dependencies were impacted by the delays.
 
-![Weppreciate Client Pack](./docs/weppreciate-client-pack.jpg)
+Each sprint had three standups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
 
-![Client confirmation of requirements](./docs/weppreciate-client-requirements-signoff.jpg)
+### Use a recognised task delegation methodology
 
-The allocation of tasks were essentially split into the back end plus databases, and the front end plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his front end skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
+The allocation of tasks were essentially split into two groupings: the back end plus databases, and the front end plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his front end skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
 
 We continued the path we laid down in Part-A, with dividing the enitre project into six sub-projects:
 
@@ -128,9 +128,6 @@ We continued the path we laid down in Part-A, with dividing the enitre project i
 
 Requirements and Design were mostly completed in Part-A.
 
-
-### Use a recognised task delegation methodology
-
 Within the remaining Sub-projects, Tasks were allocated a three-tiered effort score, of low, moderate, or high effort. We discussed these in out three-times-per-week standups, as the project progressed. This was partly to sense check the rating, but was mostly as a way to check in on each other's workload and ensure one of us was not being overloaded, and that there was balance. A higher number of low effort tasks was equivalent with a moderate task, etc. This was not a scientific approach, but gavce a clear, approximate indication and worked well.
 
 Although dependencies were not well captured in Notion, these were also discussed as we planned our next focusses for delivery. It was Nate's intent to delivery just in time API functionality to allow Katie to develop the front end. This also worked very well, for the most part, and allowed whoever was waiting for a dependency to finish, to take the next task of highest value, whether that be the next dependency, administration and rubric requirements, or styling.
@@ -142,7 +139,20 @@ Prioritisation of tasks, and continually assessing them against our Minimum Viab
 
 ## R5 Produce a working application that meets client and user needs
 
-Due to the client's business being in end of year closure, we are unable to get full sign off from the client before submitting this project for assessment. We have, however, aligned with the client at multiple points through the development cycle, and have invited partial User Acceptance Testing and feeddback from the client. We recognise the client is on holiday, driving from Melvourne to Western Australia, so it would be unreasonable to expect full UAT and substantial feedback. Were this a commercial project, we would seek UAT, feedback and acceptance from the client's delegate.
+Around Sprint 3 (we started at sprint 0), we presented a [Client Pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4) for alignment and requirements sign off. While this ideally should have been completed earlier, and delivered through a meeting, the operational needs of the business meant the client was unavaiable, and our timing was a little behind schedule. We presented this in an email, inviting the client to review and respond with questions.
+
+![Weppreciate Client Pack](./docs/weppreciate-client-pack.jpg)
+
+![Client confirmation of requirements](./docs/weppreciate-client-requirements-signoff.jpg)
+
+Due to the client's business being in end of year closure, we are unable to get full sign off from the client before submitting this project for assessment. 
+
+We did, however, align with the client at multiple points through the development cycle, invited partial User Acceptance Testing and feeddback from the client. We recognise the client is on holiday, driving from Melbourne to Western Australia. Coupled with UAT being sought prior to the completion of the project, UAT was incomplete, but the client did provide some feedback and defects, which were corrected.
+
+![Client responding to UAT, along with feedback](./docs/client-UAT.jpg)
+
+Were this a commercial project, we would seek UAT, feedback and acceptance from the client's delegate, in her absense.
+
 
 ### API Routes
 
