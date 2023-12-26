@@ -1796,6 +1796,64 @@ The Database was deployed to Atlas on mongodb.com:
 
 ## R7 Produce an application with an intuitive user interface
 
+Our application uses a simple interface with common design elements that can be found in other web applications, to make it easy for users to navigate without any prior experience with it.
+
+The colour scheme is simple and accessible, and all pages have been optimised for mobile and tablet views, in addition to a standard desktop-sized experience.
+
+### Landing page
+
+The root landing page for our application has a simple design, providing the visitor with two options:
+- Login
+- Learn more
+
+These are clearly actions for the user to take, indicated by the use of a button and a visual icon linked to the action. As we did not build a traditional "marketing website" for our web application with more information about the application available prior to logging in, we linked the users to our GitHub so they could find out more about our project.
+
+![A screenshot of the application landing page](./docs/interface-screenshots/landing-page.png)
+
+### Login page
+
+The login page continues the trend of having a simple user interface. By using a MUI template for a login page, it provides a familiar design structure for a login page - with clearly labelled fields and a submit button.
+
+![A screenshot of the application login page](./docs/interface-screenshots/login-page.png)
+
+### Dashboard page
+
+The dashboard is the first page that a user experiences in our application once logged in. It is the first time they will see the common design elements that are used across the application, such as the header. This header uses a typical design for an application - with a logo that redirects to the dashboard from other pages, a responsive search bar, and their photo (or avatar) in the top-right hand corner rendering a menu. The elements that show in this menu are where a standard user would expect - for example, settings and log out.
+
+![A screenshot of the header menu](./docs/interface-screenshots/header-menu.png)
+
+The dashboard itself has a clear "action item" with the "Send recognition" button being brought to their attention. The posts resemble a typical social media "feed", with the most recent items at the top. While no words are on the action buttons on each post, common design symbols are used here:
+- the arrow indicates "expanding" - clicking on this expands and displays comments
+- the comment button is obvious to a user, due to the use of the + on it
+- the delete button is obvious to an admin user, due to the use of the trash can icon that is typically associated with deleting
+
+![A screenshot of the application dashboard page](./docs/interface-screenshots/dashboard-page.png)
+
+The dashboard is also the first area of the application where a user will experience a modal pop-up. This draws their attention to what action is expected from them by blurring out the background. In line with standard application design elements, there is a "x" icon to close the modal pop-up, and the action on the pop-up is indicated with a button.
+
+![A screenshot of the modal pop-up](./docs/interface-screenshots/modal-popup.png)
+
+### Profile page
+
+Similar to other social media-type platforms, all users have a profile page that displays more information about them, along with posts that are related to them. This makes the interface feel familiar.
+
+![A screenshot of the application profile page](./docs/interface-screenshots/profile-page.png)
+
+### Settings page
+
+The settings page conditionally renders different settings options, based on the user's permissions. Standard users just see their account settings, whilst admins and senior managers have team settings options available to them.
+
+Clicking on each of these settings will either create a modal pop-up, or update the display to a more detailed page to navigate.
+
+![A screenshot of the application settings page](./docs/interface-screenshots/settings-page.png)
+
+The "Manage users" sub-page uses typical design elements of an admin user panel, giving them the option to see existing users, update their records, add new users or delete users:
+
+![A screenshot of the manage users page](./docs/interface-screenshots/manage-users.png)
+
+The "Release awards" sub-page also gives a similar "admin panel" type experience, where authenticated users can see items that need their approval:
+
+![A screenshot of the release awards page](./docs/interface-screenshots/release-awards.png)
 
 
 ## R8 Provides evidence of user testing
