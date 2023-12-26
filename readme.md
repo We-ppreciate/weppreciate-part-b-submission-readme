@@ -25,11 +25,11 @@ We used the following packages, frameworks and technology:
 
 #### Node.js
 
-Used for all backend scripting
+Used for all backend scripting.
 
 #### npm
 
-Used for package installation and management 
+Used for package installation and management.
 
 #### MongoDB
 
@@ -41,13 +41,13 @@ Used as the API router, handing endpoints and logic.
 
 #### Google Cloud Storage
 
-Profile photos and award category photos were upploaded to GCS, and given public URLs. We understand that in a commercial application this is not a desirable scenario. As the enterprise application would pull profile photos from Azure, through SAML SSO, and these profile pics were AI generated, there is no current privacy risk.
+Profile photos and award category photos were uploaded to GCS, and given public URLs. We understand that in a commercial application this is not a desirable scenario. As the enterprise application would pull profile photos from Azure, through SAML SSO, and these profile pics were AI generated, there is no current privacy risk.
 
 #### bcrypt
 
 bcrypt has been deployed to handle salting and hashing of user passwords, in this case, applying the default 10 rounds of hashing. In the enterprise deployment, Azure SAML SSO is the security structure required by the client.
 
-Hased passwords are saved to User documents, to allow for comparison on routes where JWT is required to be supplied, confirming legitimate acceess to the endpoint.
+Hashed passwords are saved to User documents, to allow for comparison on routes where JWT is required to be supplied, confirming legitimate access to the endpoint.
 
 #### cors
 
@@ -55,7 +55,7 @@ Cors was required to allow the front end on Netlify to communicate with the API,
 
 #### dotenv
 
-dotenv allows sensitive variables, such as usersnames and passwords, to be obscured and saved to a .env file, then used as variables through the application.
+dotenv allows sensitive variables, such as usernames and passwords, to be obscured and saved to a .env file, then used as variables through the application.
 
 #### jsonwebtoken
 
@@ -73,7 +73,7 @@ Added to the dev environment to resume the local development server, after error
 
 #### joi
 
-`joi` was added for input validation and extended with `joi/date`. Used for most of this API's POST and PATCH routes, Joi creates an additional schema to Mongoose's, and allows for clearer repsonses where data formatting is not consistent with the needs of the database.
+`joi` was added for input validation and extended with `joi/date`. Used for most of this API's POST and PATCH routes, Joi creates an additional schema to Mongoose's, and allows for clearer responses where data formatting is not consistent with the needs of the database.
 
 #### jest
 
@@ -84,6 +84,30 @@ Jest was deployed for testing. Limited unit testing has been applied to the API,
 Super test allows for additional testing functionality.
 
 ### Frontend
+
+#### React
+
+React was used as the JavaScript framework for the frontend portion of the application's code. In-built React functionality that was used in the application include useState and useEffect hooks.
+
+#### npm
+
+Used for package installation and management.
+
+#### react-router-dom
+
+React Router DOM was used to manage routing for the different pages within the single-page-application. BrowserRouter, Link, useNavigate and useParams were used to render the desired page based on the URL and user actions.
+
+#### MUI
+
+MUI (formerly known as Material UI) is a React design system. MUI components were implemented into the application to save time on styling and provide a consistent look and feel across the application. As this was the first time using MUI and there was a learning curve, regular CSS was also used to make additional styling overrides to the standard MUI styling/themes.
+
+#### jwt-decode
+
+jwt-decode was used as part of the authentication provider, to check whether a JWT token stored in local storage was still valid - and redirecting the user to login if it had expired/was invalid.
+
+#### axios
+
+Axios was used as an alternate to `fetch` when making some API requests. The key benefit of this was automatic JSON data conversion, making code more efficient when data was returned from an API request.
 
 
 ## R2 Write well designed code
@@ -103,55 +127,55 @@ Obviously, our code is stunning.
 
 ### Use a recognised project management methodology
 
-We continued our application of Agile methedology throughout this project, keeping user stories at the heart of our deliverables, while buring down our sprints.
+We continued our application of Agile methodology throughout this project, keeping user stories at the heart of our deliverables, while burning down our sprints.
 
 We elected to run 6 one-week sprints, and while we understand the regular timespan of a sprint to be two weeks, we felt one week allowed us to more comfortably pace our task delivery. In practise this meant most weeks had items that were incomplete and carried over, but we stand by the decision and the benefit it gave us through planning and development.
 
 Sprints were burned down, and at the end of each, a review took place to align on what was achieved and closed, what was delayed, and what dependencies were impacted by the delays.
 
-Each sprint had three standups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
+Each sprint had three stand-ups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
 
 ### Use a recognised task delegation methodology
 
 The allocation of tasks were essentially split into two groupings: the back end plus databases, and the front end plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his front end skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
 
-We continued the path we laid down in Part-A, with dividing the enitre project into six sub-projects:
+We continued the path we laid down in Part-A, with dividing the entire project into six sub-projects:
 
 1. Application Requirements
-1. Application Design
-1. Database
-1. Back End
-1. Front End
-1. Rubric fulfilment
+2. Application Design
+3. Database
+4. Back End
+5. Front End
+6. Rubric fulfilment
 
 ![Demonstrating the sub-projects. This was taken toward the end of Part-B, so many of the tasks making up the project have been completed.](./docs/demonstrating-projects.jpg)
 
 Requirements and Design were mostly completed in Part-A.
 
-Within the remaining Sub-projects, Tasks were allocated a three-tiered effort score, of low, moderate, or high effort. We discussed these in out three-times-per-week standups, as the project progressed. This was partly to sense check the rating, but was mostly as a way to check in on each other's workload and ensure one of us was not being overloaded, and that there was balance. A higher number of low effort tasks was equivalent with a moderate task, etc. This was not a scientific approach, but gavce a clear, approximate indication and worked well.
+Within the remaining Sub-projects, Tasks were allocated a three-tiered effort score, of low, moderate, or high effort. We discussed these in out three-times-per-week stand-ups, as the project progressed. This was partly to sense check the rating, but was mostly as a way to check in on each other's workload and ensure one of us was not being overloaded, and that there was balance. A higher number of low effort tasks was equivalent with a moderate task, etc. This was not a scientific approach, but gave a clear, approximate indication and worked well.
 
 Although dependencies were not well captured in Notion, these were also discussed as we planned our next focusses for delivery. It was Nate's intent to delivery just in time API functionality to allow Katie to develop the front end. This also worked very well, for the most part, and allowed whoever was waiting for a dependency to finish, to take the next task of highest value, whether that be the next dependency, administration and rubric requirements, or styling.
 
-Prioritisation of tasks, and continually assessing them against our Minimum Viable Product (MVP) cireteria were also key to our development cycles.
+Prioritisation of tasks, and continually assessing them against our Minimum Viable Product (MVP) criteria were also key to our development cycles.
 
-![Screenshot demonstrating tasks, which were used as discussion points through standups, for dependency identification, and task scheduling and allocation](./docs/example-tasks.jpg)
+![Screenshot demonstrating tasks, which were used as discussion points through stand-ups, for dependency identification, and task scheduling and allocation](./docs/example-tasks.jpg)
 
 
 ## R5 Produce a working application that meets client and user needs
 
-Around Sprint 3 (we started at sprint 0), we presented a [Client Pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4) for alignment and requirements sign off. While this ideally should have been completed earlier, and delivered through a meeting, the operational needs of the business meant the client was unavaiable, and our timing was a little behind schedule. We presented this in an email, inviting the client to review and respond with questions.
+Around Sprint 3 (we started at sprint 0), we presented a [Client Pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4) for alignment and requirements sign off. While this ideally should have been completed earlier, and delivered through a meeting, the operational needs of the business meant the client was unavailable, and our timing was a little behind schedule. We presented this in an email, inviting the client to review and respond with questions.
 
-![Weppreciate Client Pack](./docs/weppreciate-client-pack.jpg)
+![We'ppreciate Client Pack](./docs/weppreciate-client-pack.jpg)
 
 ![Client confirmation of requirements](./docs/weppreciate-client-requirements-signoff.jpg)
 
 Due to the client's business being in end of year closure, we are unable to get full sign off from the client before submitting this project for assessment. 
 
-We did, however, align with the client at multiple points through the development cycle, invited partial User Acceptance Testing and feeddback from the client. We recognise the client is on holiday, driving from Melbourne to Western Australia. Coupled with UAT being sought prior to the completion of the project, UAT was incomplete, but the client did provide some feedback and defects, which were corrected.
+We did, however, align with the client at multiple points through the development cycle, invited partial User Acceptance Testing and feedback from the client. We recognise the client is on holiday, driving from Melbourne to Western Australia. Coupled with UAT being sought prior to the completion of the project, UAT was incomplete, but the client did provide some feedback and defects, which were corrected.
 
 ![Client responding to UAT, along with feedback](./docs/client-UAT.jpg)
 
-Were this a commercial project, we would seek UAT, feedback and acceptance from the client's delegate, in her absense.
+Were this a commercial project, we would seek UAT, feedback and acceptance from the client's delegate, in her absence.
 
 
 ### API Routes
@@ -164,7 +188,7 @@ This API uses the following error codes:
 - `400 Bad Request`: Often handled by ErrorController.js, the 400 Error Response will reply with `Your intent is good but the request was bad. ${statusCode}, ${err.message}`, but on some routes, custom 400 error messages are used to return more specific information about what cause it. This error also covers expired token usage.
 - `401 Unauthorised`: Handled by ErrorController.js, where the user is not logged in, and responded to with the message `It looks like I'm missing your login credentials. Let's have another go. ${statusCode}, ${err.message}`
 - `403 Forbidden`: Generally handled within the route, where the required level of access is not he ld by the user - generally isAdmin or isSeniorManager. A generic 403 is available in ErrorController.js, should it be needed, with format of `You are not authorised to do that. We'pologise. ${statusCode}, ${err.message}`
-- `404 Not found`: Generaly handled by ErrorController.js, some in-route 404 errors are generated where requested records are not found. The generic 404 has the format `This is not the page you are looking for. ${statusCode}, ${err.message}`
+- `404 Not found`: Generally handled by ErrorController.js, some in-route 404 errors are generated where requested records are not found. The generic 404 has the format `This is not the page you are looking for. ${statusCode}, ${err.message}`
 - `500 Internal Server Error`: Has been implemented in two ways. If a 500 error is the error generated by the application, the message appears as `Sorry. That's a problem on our side. Mavis is looking into it now... well, after her tea. ${statusCode}: ${err.message}`, and an additional catch-all error has been created to cover any other error, with message `Sorry. That\'s a problem on our side. Look like Mavis spilled her tea on the server. ${statusCode}, ${err.message}`
 
 #### Base URL
@@ -174,7 +198,7 @@ This API uses the following error codes:
 |Endpoint|`GET /`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/)|
 |Parameters|None|
-|Response|Returns a JSON object with the following properties: `message` - a static reponse from the server|
+|Response|Returns a JSON object with the following properties: `message` - a static response from the server|
 
 **Example**
 
@@ -209,8 +233,8 @@ Four main paths are available in the API:
 |Endpoint|`POST /auth/login`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login)|
 |Parameters|*email*: string; *password*: sting|
-|Response|Returns a JSON object with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManbagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service.|
-|Note|The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconveience of a short validity period. In the commercial applciation, a better application would be to carry a shorter validity, such as 24 hours, with a longer refresh token, but on deployment for the client, the authentication would be moved to SAML SSO, through Azure, we did not implement the refresh token in this case.|
+|Response|Returns a JSON object with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service.|
+|Note|The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconvenience of a short validity period. In the commercial application, a better application would be to carry a shorter validity, such as 24 hours, with a longer refresh token, but on deployment for the client, the authentication would be moved to SAML SSO, through Azure, we did not implement the refresh token in this case.|
 
 **Example**
 
@@ -285,7 +309,7 @@ Response:
 |Endpoint|`GET /users/all`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all)|
 |Parameters|none|
-|Response|*message* - a welcome message, depending on whether the requestor has isAdmin: true or false; Returns a JSON object with an array of all user objects in the User collection. Note: passwordHashes are not returned in the array.|
+|Response|*message* - a welcome message, depending on whether the requester has isAdmin: true or false; Returns a JSON object with an array of all user objects in the User collection. Note: passwordHashes are not returned in the array.|
 
 **Example**
 
@@ -1033,7 +1057,7 @@ Response:
 |--|--|
 |Endpoint|`GET /nominations/page/:page`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/page/:page`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/all/nominator/page/:page)|
-|Parameters|**URL Query** *:page* - returns all nominations, in descending sumbission date order, in a pagenation format, with 20 items per page. **Request body** none |
+|Parameters|**URL Query** *:page* - returns all nominations, in descending submission date order, in a pagination format, with 20 items per page. **Request body** none |
 |Response||
 
 **Example**
@@ -1265,7 +1289,7 @@ Response:
 |Key|Value|Description|
 |--|--|--|
 |recipientUser|string, required|The ID of the person receiving the recognition|
-|nomintaorFullUser|string, optional|The ID of the person submitting the recognition, if a full user|
+|nominatorFullUser|string, optional|The ID of the person submitting the recognition, if a full user|
 |NominatorBasicUser|object, optional|Used where the person submitting is not a full user|
 |.basicName|object, optional|Object consisting of .first and .last|
 |.first|string, optional|Non-full user's first name|
@@ -1277,7 +1301,7 @@ Response:
 |isNominatorFullUser|boolean, required, default:false|true is the user is a full user of the application|
 |isNominationInstant|boolean, required, default:false|true if the recognition is instant; false if recognition is a nomination for an official award|
 |isAward|boolean, required, default:false|true, where the Senior Manager has promoted the nomination to an award|
-|isReleased|boolean, required, default:false|true, where the Senior Manager released the nominations and award winner posts to users' ddashboards|
+|isReleased|boolean, required, default:false|true, where the Senior Manager released the nominations and award winner posts to users' dashboards|
 |releaseDate|string, optional, allow null|captures the date the recognition is released to dashboards|
 
 **Example**
@@ -1292,7 +1316,7 @@ REQUEST BODY
     "recipientUser": "657d7c33d8b97e77efe0193c",
     "nominatorFullUser": "657d7c33d8b97e77efe01935",
     "nominationValue": "Commitment",
-    "nominationBody": "Katie has perseverence and fortitude.",
+    "nominationBody": "Katie has perseverance and fortitude.",
     "nominationDate": "24-12-2023",
     "isNominatorFullUser": true,
     "isNominationInstant": true,
@@ -1312,7 +1336,7 @@ Response:
         "nominationValue": [
             "Commitment"
         ],
-        "nominationBody": "Katie has perseverence and fortitude.",
+        "nominationBody": "Katie has perseverance and fortitude.",
         "nominationDate": "24-12-2023",
         "isNominatorFullUser": true,
         "isNominationInstant": true,
@@ -1356,7 +1380,7 @@ Response:
     "nominationValue": [
         "Commitment"
     ],
-    "nominationBody": "Katie has perseverence and fortitude.",
+    "nominationBody": "Katie has perseverance and fortitude.",
     "nominationDate": "24-12-2023",
     "isNominatorFullUser": true,
     "isNominationInstant": true,
@@ -1392,7 +1416,7 @@ Response:
         "nominationValue": [
             "Commitment"
         ],
-        "nominationBody": "Katie has perseverence and fortitude.",
+        "nominationBody": "Katie has perseverance and fortitude.",
         "nominationDate": "24-12-2023",
         "isNominatorFullUser": true,
         "isNominationInstant": true,
@@ -1448,7 +1472,7 @@ Response:
 |--|--|
 |Endpoint|`GET /comments/all/nomination/:id`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/:id)|
-|Parameters|**URL Query** *:id* is the Nomination id. It is used to retreive all comments linked to the nomination|
+|Parameters|**URL Query** *:id* is the Nomination id. It is used to retrieve all comments linked to the nomination|
 |Response|Returns an array of all Comment objects linked to the provided Nomination.|
 
 **Example**
@@ -1485,7 +1509,7 @@ Response:
 |--|--|
 |Endpoint|`GET /one/nomination/:id`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/:id)|
-|Parameters|**URL Query** *:id* is the Comment id. It is used to retreive one comments, with the id specified.|
+|Parameters|**URL Query** *:id* is the Comment id. It is used to retrieve one comments, with the id specified.|
 |Response|Returns an object of the Comment objects with id provided in the URL.|
 
 **Example**
@@ -1512,7 +1536,7 @@ Response:
 |--|--|
 |Endpoint|`GET /all/user/:id`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/:id`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/:id)|
-|Parameters|**URL Query** *:id* is the `commenterId`, which matches the User id. It is used to retreive all comments comments, with the id specified.|
+|Parameters|**URL Query** *:id* is the `commenterId`, which matches the User id. It is used to retrieve all comments comments, with the id specified.|
 |Response|Returns an array of all Comment objects created by the user, with id provided in the URL.|
 
 **Example**
