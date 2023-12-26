@@ -17,6 +17,24 @@
 
 [Part-B Frontend deployment](https://playful-pudding-8faa4e.netlify.app/)
 
+### Notion
+
+[We'ppreciate Client pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4)
+
+[Tasks](https://weppreciate.notion.site/75b89fa68e894f5f954787c5eeef489f?v=989fd6fd0ad146e4af4e6ada44b70641&pvs=4)
+
+[Projects](https://weppreciate.notion.site/fd3c53db9a1f4e27b59dcc063b46864a?v=41b6032216174cf59edfa04a8e317941&pvs=4)
+
+[Sprint board](https://weppreciate.notion.site/8230b9bd9475472a97c6031be273cdbc?v=75f37625837d4278a914328bf30de9e1&pvs=4)
+
+[Sprints](https://weppreciate.notion.site/096aac0b89cd4d4ba7fcd0b02ce6187a?v=b9b2dde3fc2e4b53b59e3509f8c3d2b2&pvs=4)
+
+[Meetings](https://weppreciate.notion.site/33e465ae7b2c4bdf9a261acbbf5167e0?v=00a1f910091e4b5c98a984ca396519f6&pvs=4)
+
+[Docs](https://weppreciate.notion.site/59318e1ab6b840efbb38de4eb82117ec?v=c5f3f0c8a680426482b9cb31b7ec58ce&pvs=4)
+
+
+
 
 ## R1 At minimum use MongoDB, Express, React, Node
 We used the following packages, frameworks and technology:
@@ -109,21 +127,20 @@ jwt-decode was used as part of the authentication provider, to check whether a J
 
 Axios was used as an alternate to `fetch` when making some API requests. The key benefit of this was automatic JSON data conversion, making code more efficient when data was returned from an API request.
 
-
 ## R2 Write well designed code
-
----
-
-Obviously, our code is stunning.
-
----
-
 
 ## R3 Employ and utilise proper source control methodology (git)
 
-The code repositories for both the frontend and backend of our application used Git as the source control methodology, and GitHub as our software to implement and manage the source control of our code.
+Github desktop was used throughout, where an organisation was created, and four repos were created:
 
+1. Part A
+1. Part B backend
+1. Part B front end
+1. Part B readme
 
+A branch was always created, where work was required on Part-B front end or back end, keeping main free from direct development.
+
+For the application repos, we included an additional safety step, where branches could not be automatically merged into main, without the review and approval of the other. This kept us across changes being made by the other team mate, and allowed us to catch several potential issues before they became actual issues.
 
 ## R4 Demonstrate your ability to work in a team
 
@@ -136,6 +153,60 @@ We elected to run 6 one-week sprints, and while we understand the regular timesp
 Sprints were burned down, and at the end of each, a review took place to align on what was achieved and closed, what was delayed, and what dependencies were impacted by the delays.
 
 Each sprint had three stand-ups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
+
+We continued utilising Standup Meeting records, Task delegation updating and control, timeslines and kanban throughout.
+
+#### End of Sprint 2
+
+![Documents list at the end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/docs-end-sprint-2.jpg)
+
+![Projects at the end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/project-end-sprint-2.jpg)
+
+![Sprint taskboard end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/sprint-board-end-wk-2.jpg)
+
+![Standup 1 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-1-wk-2.jpg)
+
+![Standup 2 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-2-wk-2.jpg)
+
+![Task timeline, end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/task-timeline-end-wk-2.jpg)
+
+![Tasks by Project at end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/tasks-by-project-end-wk-2.jpg)
+
+#### End of Sprint 3
+
+![Documents list at the end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/docs-end-sprint-3.jpg)
+
+![Projects at the end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/projects-end-sprint-3.jpg)
+
+![Sprint taskboard end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/sprint-board-end-wk-3.jpg)
+
+![Standup 1 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-1-wk-3.jpg)
+
+![Standup 2 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-2-wk-3.jpg)
+
+![Task timeline, end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/task-timeline-end-wk-3.jpg)
+
+![Tasks by Project at end of Sprint 3 (part a)](./docs/Notion-PM-screenshots/end-wk-3/tasks-by-project-end-sprint-3a.jpg)
+
+![Tasks by Project at end of Sprint 3 (part b)](./docs/Notion-PM-screenshots/end-wk-3/tasks-by-project-end-wk-3b.jpg)
+
+#### End of Sprint 4
+
+![Documents list at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/docs-end-sprint-4.jpg)
+
+![Projects at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/project-end-sprint-4.jpg)
+
+![Sprint taskboard end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/sprint-board-end-wk-4.jpg)
+
+![Standup 1 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-1-wk-4.jpg)
+
+![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-2-wk-4.jpg)
+
+![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-3-wk-4.jpg)
+
+![Task timeline, end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/task-timeline-end-wk-4.jpg)
+
+![Tasks by Project at end of Sprint 4 (part a)](./docs/Notion-PM-screenshots/end-wk-4/task-by-project-end-wk-4.jpg)
 
 ### Use a recognised task delegation methodology
 
@@ -179,9 +250,7 @@ We did, however, align with the client at multiple points through the developmen
 
 Were this a commercial project, we would seek UAT, feedback and acceptance from the client's delegate, in her absence.
 
-
 ### API Routes
-
 
 #### Errors
 
@@ -205,19 +274,18 @@ This API uses the following error codes:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/
 ```
 
 Response:
 
-```
+``` javascript
 {
   "message": "You work hard. We'ppreciate you."
 }
 ```
-
-
 
 #### End Points
 
@@ -241,7 +309,8 @@ Four main paths are available in the API:
 **Example**
 
 Request:
-```
+
+``` javascript
 
 POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login
 
@@ -255,7 +324,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "id": "657d7c33d8b97e77efe01931",
     "name": {
@@ -275,7 +344,6 @@ Response:
 }
 ```
 
-
 |  |  |
 |--|--|
 |Endpoint|`PATCH /auth/reset/:id`|
@@ -286,7 +354,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/reset/657d7c33d8b97e77efe01931
 
 REQUEST BODY
@@ -298,7 +367,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "message": "Password reset successful. With great passwords come great responsibility."
 }
@@ -316,13 +385,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all
 ```
 
 Response:
 
-```
+``` javascript
 {
     "message": "Hello non-Admin",
     "Users": [
@@ -359,13 +429,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/fullusers/
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Users": [
         {
@@ -401,13 +472,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/id/657d7c33d8b97e77efe01931
 ```
 
 Response:
 
-```
+``` javascript
 {
     "User": {
         "name": {
@@ -440,13 +512,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/usersone/name/nate/picone
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Users": {
         "name": {
@@ -479,13 +552,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/ar
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Users": [
         {
@@ -556,13 +630,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all/manager/657d7c33d8b97e77efe01939
 ```
 
 Response:
 
-```
+``` javascript
 {
     "User": [
         {
@@ -615,13 +690,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/alex.greatbeard@yourcompany.com
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Users": [
         {
@@ -677,7 +753,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/new
 
 REQUEST BODY
@@ -701,7 +778,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "User": {
         "email": "georgia.wyoming@yourcompany.com",
@@ -733,7 +810,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/657d7c33d8b97e77efe01931
 
 REQUEST BODY
@@ -746,7 +824,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "name": {
         "first": "Nate",
@@ -777,7 +855,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/self/657d7c33d8b97e77efe01931
 
 REQUEST BODY
@@ -790,7 +869,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "name": {
         "first": "Nate",
@@ -822,7 +901,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/update/admin/657d7c33d8b97e77efe01931
 
 REQUEST BODY
@@ -835,7 +915,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "name": {
         "first": "Nate",
@@ -866,13 +946,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/delete/admin/65875811253eeecd52862523
 ```
 
 Response:
 
-```
+``` javascript
 {
     "User": {
         "name": {
@@ -906,13 +987,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": [
         {
@@ -946,13 +1028,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/recipient/657d7c33d8b97e77efe01935
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": [
         {
@@ -1009,13 +1092,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/katie/lock
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": [
         {
@@ -1065,13 +1149,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/page/1
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": [
         {
@@ -1121,13 +1206,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nominator/657d7c33d8b97e77efe0193c
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": {
         "_id": "657d7c34d8b97e77efe0194f",
@@ -1158,12 +1244,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator/:id
 ```
 
 Response:
 
+ javascript
 ```
 {
     "Nominations": [
@@ -1204,7 +1292,6 @@ Response:
 }
 ```
 
-
 |  |  |
 |--|--|
 |Endpoint|`GET /nominations/one/recipient/:id`|
@@ -1215,13 +1302,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/recipient/657d7c33d8b97e77efe0193c
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": {
         "_id": "657d7c34d8b97e77efe01955",
@@ -1252,13 +1340,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/one/nomination/657d7c34d8b97e77efe01955
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": {
         "_id": "657d7c34d8b97e77efe01955",
@@ -1309,7 +1398,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/new
 
 REQUEST BODY
@@ -1330,7 +1420,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "Nomination": {
         "recipientUser": "657d7c33d8b97e77efe0193c",
@@ -1361,7 +1451,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/update/nom/65878017c3b522e42ebe9ad8
 
 REQUEST BODY
@@ -1374,7 +1465,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "_id": "65878017c3b522e42ebe9ad8",
     "recipientUser": "657d7c33d8b97e77efe0193c",
@@ -1403,13 +1494,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/delete/65878017c3b522e42ebe9ad8
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Nominations": {
         "_id": "65878017c3b522e42ebe9ad8",
@@ -1442,13 +1534,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all
 ```
 
 Response:
 
-```
+``` javascript
 [
     {
         "_id": "6580a58f14332fff07a04c76",
@@ -1480,13 +1573,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/nomination/657d7c34d8b97e77efe01955
 ```
 
 Response:
 
-```
+``` javascript
 [
     {
         "_id": "6580a58f14332fff07a04c76",
@@ -1517,13 +1611,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/one/nomination/6580a58f14332fff07a04c76
 ```
 
 Response:
 
-```
+``` javascript
 {
     "_id": "6580a58f14332fff07a04c76",
     "nominationId": "657d7c34d8b97e77efe01955",
@@ -1544,13 +1639,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/all/user/657d7c33d8b97e77efe01931
 ```
 
 Response:
 
-```
+``` javascript
 [
     {
         "_id": "6580a58f14332fff07a04c76",
@@ -1590,7 +1686,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 POST https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/post/657d7c34d8b97e77efe01955
 
 REQUEST BODY
@@ -1605,7 +1702,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "Comment": {
         "nominationId": "657d7c34d8b97e77efe01955",
@@ -1618,7 +1715,6 @@ Response:
 }
 ```
 
-
 |  |  |
 |--|--|
 |Endpoint|`PATCH /update/:id`|
@@ -1629,7 +1725,8 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 PATCH https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/update/65875c67dfb25e55787c5a7c
 
 REQUEST BODY
@@ -1641,7 +1738,7 @@ REQUEST BODY
 
 Response:
 
-```
+``` javascript
 {
     "Comment": {
         "_id": "65878a87c3b522e42ebe9b76",
@@ -1664,13 +1761,14 @@ Response:
 **Example**
 
 Request:
-```
+
+``` javascript
 DELETE https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/comments/delete/6587bf16cbd9348c16ac0f42
 ```
 
 Response:
 
-```
+``` javascript
 {
     "Comment": {
         "_id": "6587bf16cbd9348c16ac0f42",
@@ -1683,16 +1781,14 @@ Response:
 }
 ```
 
-
-
 ## R6 Deploy the application to a cloud hosting service
 
 ### API
-The API was deployed to Heroku - 
+[The API was deployed to Heroku here](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/)
 
-The Database was deployed to Mongo Atlas - 
+The Database was deployed to Atlas on mongodb.com
 
-The front end was deployed to Netlify - 
+[The front end was deployed to Netlify](https://playful-pudding-8faa4e.netlify.app/)
 
 ## R7 Produce an application with an intuitive user interface
 
@@ -1700,6 +1796,30 @@ The front end was deployed to Netlify -
 
 ## R8 Provides evidence of user testing
 
+### Client user testing
+
+Included earlier, repeating the inclusion of the email. This was sent after completion of user testing.
+
+As noted, the client was on holiday, and driving from Melbourne to Western Australia, so her opporunities to test were limited, but we are greatful for the amount of testing she was able to do.
+
+The feedback allowed some changes to me made in response to the testing conducted.
+
+![Email from client, after user testing](./docs/client-UAT.jpg)
+
+### Front end user testing
+Frontend user testing was exported from Notion, and is viewable as a PDF
+
+### Back end user testing
+Backend user testing was exported from Notion, and is viewable as a PDF [here](./docs/backend-user-testing/backend-user-testing.pdf).
+
+Screenshots of the Postman results are also saved in this submission, to `../backend-user-testing/backend-testing-screenshots/` with the filenames matching the test ID number (ie UT-1.png).
+
+Also viewable on Notion:
+![Screenshot of backend testing page on Notion](./docs/notion-backend-testing.jpg)
 
 
 ## R9 Utilises a formal testing framework
+
+### Front end testing
+
+### Back end testing
