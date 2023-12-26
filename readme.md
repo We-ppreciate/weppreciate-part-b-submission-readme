@@ -209,6 +209,19 @@ Screenshots of our workspace at the end of each sprint:
 
 ![Tasks by Project at end of Sprint 4 (part a)](./docs/Notion-PM-screenshots/end-wk-4/task-by-project-end-wk-4.jpg)
 
+#### End of Sprint 5
+
+![Documents list at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-5/docs-end-sprint-5.jpg)
+
+![Projects at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-5/project-end-sprint-5.jpg)
+
+
+![Meetings at end of project](./docs/Notion-PM-screenshots/end-wk-5/meetings-end-wk-5.jpg)
+
+![Task timeline, end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-5/task-timeline-wk-5.jpg)
+
+![Tasks by Project at end of Sprint 4 (part a)](./docs/Notion-PM-screenshots/end-wk-5/tasks-by-project-wk-5.jpg)
+
 ### Use a recognised task delegation methodology
 
 The allocation of tasks were essentially split into two groupings: the backend plus databases, and the frontend plus styling. We discussed the allocation of duties, and agreed that Katie's skills were stronger with React and styling, and that while Nate was keen to improve his frontend skills, our plan was ambitious for the time available, which meant we needed to aim for maximum efficiency.
