@@ -1,9 +1,8 @@
 # T3A2-B Katie Lock and Nate Picone
 
-## You work hard. We'ppreciate you.
+## You work hard. We'ppreciate you
 
 ### We'ppreciate - a full stack MERN application. Readme for Part-B submission
-
 
 ## Helpful links
 
@@ -33,17 +32,15 @@
 
 [Docs](https://weppreciate.notion.site/59318e1ab6b840efbb38de4eb82117ec?v=c5f3f0c8a680426482b9cb31b7ec58ce&pvs=4)
 
-
-
-
 ## R1 At minimum use MongoDB, Express, React, Node
+
 We used the following packages, frameworks and technology:
 
 ### Backend
 
 #### Node.js
 
-Used for all backend scripting.
+Framework for all API server code.
 
 #### npm
 
@@ -91,15 +88,7 @@ Added to the dev environment to resume the local development server, after error
 
 #### joi
 
-`joi` was added for input validation and extended with `joi/date`. Used for most of this API's POST and PATCH routes, Joi creates an additional schema to Mongoose's, and allows for clearer responses where data formatting is not consistent with the needs of the database.
-
-#### jest
-
-Jest was deployed for testing. Limited unit testing has been applied to the API, as most testing was manual.
-
-#### supertest
-
-Super test allows for additional testing functionality.
+`joi` was added for input validation and extended with `joi/date`. Used for most of this API's POST and PATCH routes, Joi creates an additional schema to those created by Mongoose for the purpose of data validation, allowing for clearer responses where data formatting is not consistent with the needs of the database.
 
 ### Frontend
 
@@ -140,7 +129,7 @@ Github desktop was used throughout, where an organisation was created, and four 
 
 A branch was always created, where work was required on Part-B front end or back end, keeping main free from direct development.
 
-For the application repos, we included an additional safety step, where branches could not be automatically merged into main, without the review and approval of the other. This kept us across changes being made by the other team mate, and allowed us to catch several potential issues before they became actual issues.
+For the application repos, we included an additional safety step, where branches could not be automatically merged into main, without the review and approval of the other. This kept us across changes being made by the other teammate, and allowed us to catch several potential issues before they became actual issues.
 
 ## R4 Demonstrate your ability to work in a team
 
@@ -148,13 +137,16 @@ For the application repos, we included an additional safety step, where branches
 
 We continued our application of Agile methodology throughout this project, keeping user stories at the heart of our deliverables, while burning down our sprints.
 
-We elected to run 6 one-week sprints, and while we understand the regular timespan of a sprint to be two weeks, we felt one week allowed us to more comfortably pace our task delivery. In practise this meant most weeks had items that were incomplete and carried over, but we stand by the decision and the benefit it gave us through planning and development.
+We elected to run 6 one-week sprints, and while we understand the regular timespan of a sprint to be two weeks, we felt one week allowed us to more comfortably divide and pace our task delivery. In practise this meant most weeks had items that were incomplete and carried over, but we stand by the decision and the benefit it gave us through planning and development.
 
-Sprints were burned down, and at the end of each, a review took place to align on what was achieved and closed, what was delayed, and what dependencies were impacted by the delays.
+As sprints were burned down, and at the end of each, a review took place to discuss what was achieved and closed, what which items were delayed, along with dependencies, or any downstream impacts.
 
-Each sprint had three stand-ups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
+Each sprint had three stand-ups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform. On occasion, we were unable to complete all standups in a week, and in those cases, we ran an "async" standup, where we updated each other on progress and asked questions, not in real time.
 
-We continued utilising Stand-up Meeting records, Task delegation updating and control, timelines and Kanban throughout.
+
+We continued utilising Standup Meeting records, Task delegation updating and control, timelines, and kanban throughout.
+
+Screenshots of our workspace at the end of each sprint:
 
 #### End of Sprint 2
 
@@ -225,14 +217,14 @@ We continued the path we laid down in Part-A, with dividing the entire project i
 
 Requirements and Design were mostly completed in Part-A.
 
-Within the remaining Sub-projects, Tasks were allocated a three-tiered effort score, of low, moderate, or high effort. We discussed these in out three-times-per-week stand-ups, as the project progressed. This was partly to sense check the rating, but was mostly as a way to check in on each other's workload and ensure one of us was not being overloaded, and that there was balance. A higher number of low effort tasks was equivalent with a moderate task, etc. This was not a scientific approach, but gave a clear, approximate indication and worked well.
+Within the remaining Sub-projects, Tasks were allocated a three-tiered effort score, of low, moderate, or high effort, which was determined based on level of difficulty, level of time required, or a combination of both. We discussed these in out three-times-per-week stand-ups, as the project progressed, and this was partly to sense check the rating, but was mostly as a way to check in on each other's workload and ensure relative balance in workload and task allocation. A higher number of low effort tasks was equivalent with a moderate task, etc. This was not a scientific approach, but gave a clear, approximate indication and worked well.
 
-Although dependencies were not well captured in Notion, these were also discussed as we planned our next focusses for delivery. It was Nate's intent to deliver just-in-time API functionality to allow Katie to develop the front end. This also worked very well, for the most part, and allowed whoever was waiting for a dependency to finish, to take the next task of highest value, whether that be the next dependency, administration and rubric requirements, or styling.
+Although dependencies were not well captured in Notion, these were also discussed as we planned our next focusses for delivery. It was Nate's intent to deliver API functionality just in time to allow Katie to develop the front end. For the most part, this also worked exceedingly  well, and allowed whoever was waiting for a dependency to finish, to take the next task of highest value, whether that be the next dependency, some administration or rubric requirements, or pick up some non-time-sensitive activity, such as styling.
+
 
 Prioritisation of tasks, and continually assessing them against our Minimum Viable Product (MVP) criteria were also key to our development cycles.
 
 ![Screenshot demonstrating tasks, which were used as discussion points through stand-ups, for dependency identification, and task scheduling and allocation](./docs/example-tasks.jpg)
-
 
 ## R5 Produce a working application that meets client and user needs
 
@@ -242,9 +234,9 @@ Around Sprint 3 (we started at sprint 0), we presented a [Client Pack](https://w
 
 ![Client confirmation of requirements](./docs/weppreciate-client-requirements-signoff.jpg)
 
-Due to the client's business being in end of year closure, we are unable to get full sign off from the client before submitting this project for assessment. 
+Due to the client being closed for the end of year period, we are unable to get full sign off from the client before submitting this project for assessment.
 
-We did, however, align with the client at multiple points through the development cycle, invited partial User Acceptance Testing and feedback from the client. We recognise the client is on holiday, driving from Melbourne to Western Australia. Coupled with UAT being sought prior to the completion of the project, UAT was incomplete, but the client did provide some feedback and defects, which were corrected.
+We did, however, align with the client at multiple points through the development cycle, and invited both partial User Acceptance Testing and feedback from the client. We recognise the client is on holiday, driving from Melbourne to Western Australia. Coupled with UAT being sought prior to the completion of the project, UAT was incomplete, but the client was able to provide some feedback and identify some defects, which were welcome, and the defects were addressed.
 
 ![Client responding to UAT, along with feedback](./docs/client-UAT.jpg)
 
@@ -271,7 +263,7 @@ This API uses the following error codes:
 |Parameters|None|
 |Response|Returns a JSON object with the following properties: `message` - a static response from the server|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -303,10 +295,10 @@ Four main paths are available in the API:
 |Endpoint|`POST /auth/login`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/auth/login)|
 |Parameters|*email*: string; *password*: sting|
-|Response|Returns a JSON object with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service.|
-|Note|The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconvenience of a short validity period. In the commercial application, a better application would be to carry a shorter validity, such as 24 hours, with a longer refresh token, but on deployment for the client, the authentication would be moved to SAML SSO, through Azure, we did not implement the refresh token in this case.|
+|Response|Returns a JSON object of the user's User document, with the following properties: *id* - the document id from the User collection; *name.first* - first name of the user; *name.last* - last name of the user; *businessUnit* - the business unit of the user; *lineManagerId* - the id of the User document, linked as the user's line manager; *userTagLine* - self-supplied bio or tagline of the user; *userPhotoKey* - the public URL of the user's photo. In the client's application, this would be obtained from Azure AD, and this would be applied as the application was integrated with existing corporate structure and security needs; *isFullUser* - boolean to indicate whether the user had full access or was a guest user; *isLineManager* - boolean used for Line Manager restricted access authorisation; *isAdmin* - boolean used for Admin restricted access authorisation; *token* JWT returned to the user and used for authentication as they use the service.|
+|Note|The JWT has been set with a 7-day expiry, allowing the client to test and explore the service without the inconvenience of a short validity period. In the commercial application, a better application would be to carry a shorter validity, such as 24 hours, with a longer refresh token, but on deployment for the client, the authentication would be moved to SAML SSO, through Azure, we did not implement the refresh token in this case. *passworHash* is not sent in the response|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -351,7 +343,7 @@ Response:
 |Parameters|**URL query** *:id* - forms the query within the URL and is the id of the account requiring the password reset; **request body** *newPassword*: string|
 |Response|Returns a JSON object with the following properties: **message** |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -381,8 +373,9 @@ Response:
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/all)|
 |Parameters|none|
 |Response|*message* - a welcome message, depending on whether the requester has isAdmin: true or false; Returns a JSON object with an array of all user objects in the User collection. Note: passwordHashes are not returned in the array.|
+|Note|The reponse message serves no function, other than it being legacy code from early testing.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -426,7 +419,7 @@ Response:
 |Parameters|none|
 |Response|Returns a JSON object with an array of all user objects in the User collection, where fullUser: true. Note: passwordHashes are not returned in the array.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -469,7 +462,7 @@ Response:
 |Parameters|**URL Query** *:id* is the id of the User document to be returned; **Request body** none.|
 |Response|Returns a JSON object with the User document, with matching id. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -506,10 +499,10 @@ Response:
 |--|--|
 |Endpoint|`GET /users/one/name/:first/:last`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/usersone/name/:first/:last`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/one/name/:first/:last)|
-|Parameters|**URL Query** *:first* is the full name.first within the desired User document - note this is not case sensitive; *:last*: is the full name.last within the desired user document - note this is not case sensitive; **Request body** none.|
-|Response|Returns a JSON object with one User document, with matching name.first AND name.second. passwordHash is not returned.|
+|Parameters|**URL Query** *:first* is the full `name.first` within the desired User document - note this is not case sensitive; *:last*: is the full `name.last` within the desired user document - note this is not case sensitive; **Request body** none.|
+|Response|Returns a JSON object with one User document, with matching `name.first` AND `name.last`. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -546,10 +539,10 @@ Response:
 |--|--|
 |Endpoint|`GET /users/search/:string`|
 |Route|[`https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/:string`](https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/users/search/:string)|
-|Parameters|**URL Query** *:string* - is matched against `name.first` and `name.last` within the User documents, and matching documents are added to an array - note that the search string is case insensitive and, as applied, can only be a contiguous string without spaces; **Request body** none.|
+|Parameters|**URL Query** *:string* - is matched within `name.first` and `name.last` within the User documents, and matching documents are added to an array - note that the search string is case insensitive and, as currently applied, can only be a contiguous string without spaces. Future iterations will look to expand this functionality further; **Request body** none.|
 |Response|Returns a JSON object with User documents. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -627,7 +620,7 @@ Response:
 |Response|Returns a JSON object with an array of User documents, with matching lineManager id. passwordHash is not returned.|
 |Note|Authentication restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -687,7 +680,7 @@ Response:
 |Parameters|**URL Query** *:email* - is matched against `email` within the User documents, and one matching document is returned- note that the search string is case insensitive; **Request body** none.|
 |Response|Returns a JSON object with User documents. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -731,7 +724,6 @@ Response:
 |Response|Returns a JSON object with User documents. passwordHash is not returned.|
 |Note|Authorisation restricts access to accounts where `isLineManager: true` or `isAdmin: true`|
 
-
 > [!NOTE] Valid key/value pairs for creating a new record:
 
 |Key|Value|
@@ -749,8 +741,7 @@ Response:
 |isSeniorManager|boolean, required, default:false|
 |isAdmin|boolean, required, default:false|
 
-
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -807,7 +798,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned this is then checked against the user id provided through the JWT token, as an additional check before documents are updated; **Request body** userTagline is currently the only field updatable by users.|
 |Response|Returns a JSON object with User document. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -852,7 +843,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned this is then checked against the user id provided through the JWT token, as an additional check before documents are updated; **Request body** userTagline is currently the only field updatable by users.|
 |Response|Returns a JSON object with User document. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -890,7 +881,6 @@ Response:
 }
 ```
 
-
 |  |  |
 |--|--|
 |Endpoint|`PATCH /users/update/admin/:id`|
@@ -898,7 +888,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned. **Request body** *name.first* string, optional; *name.first* string, optional; *email* string, optional; *businessUnit* string, optional; *LineManagerId* string, optional; *userTagLine* string, optional; *userPhotoKey* string, optional; *isFullUser* boolean, optional; *isLineManager* boolean, optional; *isSeniorManager* boolean, optional; *isAdmin* boolean, optional. Value validation also applies.|
 |Response|Returns a JSON object with User document. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -943,7 +933,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the User documents, and one matching document is returned and deleted. **Request body** none|
 |Response|Returns a JSON object with User document. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -984,7 +974,7 @@ Response:
 |Parameters|*message* - Returns a JSON object with an array of all Nomination objects in the User collection. |
 |Response||
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1025,7 +1015,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the Nominations documents, and an array of all matching documents is returned. **Request body** none|
 |Response| |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1089,7 +1079,7 @@ Response:
 |Parameters|**URL Query** *:firstName* - is matched against `name.first` within the User documents, *:lastName* is matched against `name.last` in the User documents, to return the ID of the nominator, which is then matched against nominatorFullUser Nomination documents. If no matching `User.name` is found, the same values are used to match against `nominatorBasicUser.basicName` in the Nominations collection, and an array of all matching Nomination documents is returned. **Request body** none |
 |Response||
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1146,7 +1136,7 @@ Response:
 |Parameters|**URL Query** *:page* - returns all nominations, in descending submission date order, in a pagination format, with 20 items per page. **Request body** none |
 |Response||
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1203,7 +1193,7 @@ Response:
 |Parameters|**URL Query** *:id* - returns most recent nomination raised by the nominator's id provided. **Request body** none|
 |Response| |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1241,7 +1231,7 @@ Response:
 |Parameters|**URL Query** *:page* - returns all nominations, raised by the nominator's id provided. **Request body** none |
 |Response||
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1251,8 +1241,7 @@ GET https://weppreciate-api-05b8eaa3cdc2.herokuapp.com/nominations/all/nominator
 
 Response:
 
- javascript
-```
+``` javascript
 {
     "Nominations": [
         {
@@ -1299,7 +1288,7 @@ Response:
 |Parameters|**URL Query** *:id* - returns the recent nomination raised to the recipient's id provided. **Request body** none|
 |Response| |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1337,7 +1326,7 @@ Response:
 |Parameters|**URL Query** *:id* - returns the Nomination document object with ID specified in the URL. **Request body** none|
 |Response| |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1395,7 +1384,7 @@ Response:
 |isReleased|boolean, required, default:false|true, where the Senior Manager released the nominations and award winner posts to users' dashboards|
 |releaseDate|string, optional, allow null|captures the date the recognition is released to dashboards|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1448,7 +1437,7 @@ Response:
 |Parameters|**URL Query** *:id* - finds the Nomination document object with ID specified in the URL. **Request body** the fields requiring an state change, but is restricted to: *nominationId* legacy code and is optional - id is already provided in URL query; *isAward* boolean, optional; *isReleased* boolean, optional; *releaseDate* string in D-MM-YYYY format|
 |Response|A JSON object with the updated Nomination. |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1491,7 +1480,7 @@ Response:
 |Parameters|**URL Query** *:id* - is matched against `id` within the Nomination documents, and one matching document is returned and deleted. **Request body** none|
 |Response|Returns a JSON object with Nomination document. passwordHash is not returned.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1531,7 +1520,7 @@ Response:
 |Parameters|none|
 |Response|Returns an array of all document objects in the Comments collection.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1570,7 +1559,7 @@ Response:
 |Parameters|**URL Query** *:id* is the Nomination id. It is used to retrieve all comments linked to the nomination|
 |Response|Returns an array of all Comment objects linked to the provided Nomination.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1608,7 +1597,7 @@ Response:
 |Parameters|**URL Query** *:id* is the Comment id. It is used to retrieve one comments, with the id specified.|
 |Response|Returns an object of the Comment objects with id provided in the URL.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1636,7 +1625,7 @@ Response:
 |Parameters|**URL Query** *:id* is the `commenterId`, which matches the User id. It is used to retrieve all comments comments, with the id specified.|
 |Response|Returns an array of all Comment objects created by the user, with id provided in the URL.|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1683,7 +1672,7 @@ Response:
 |commentBody|string, required|
 |commentDate|date, required, format 'D-MM-YYYY'|
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1722,7 +1711,7 @@ Response:
 |Parameters|**URL Query** id of the comment record to be updated. **Request body** *commentBody* the updated comment body|
 |Response|Returns the object of the comment linked to the Nomination document, after updating. |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1758,7 +1747,7 @@ Response:
 |Parameters|**URL Query** id of the comment record to be updated. **Request body** none|
 |Response|Returns the object of the comment linked to the Nomination document, after updating. |
 
-**Example**
+EXAMPLE:
 
 Request:
 
@@ -1796,8 +1785,6 @@ The Database was deployed to Atlas on mongodb.com:
 
 ## R7 Produce an application with an intuitive user interface
 
-
-
 ## R8 Provides evidence of user testing
 
 ### Client user testing
@@ -1811,6 +1798,7 @@ The feedback allowed some changes to me made in response to the testing conducte
 ![Email from client, after user testing](./docs/client-UAT.jpg)
 
 ### Front end user testing
+
 Frontend user testing was exported from Notion, and is viewable as a PDF [here]
 
 Screenshots of testing results are also saved in this submission, to `../docs/frontend-user-testing-screenshots/` with the filenames matching the test ID number (ie FE-UT-18.png).
@@ -1819,6 +1807,7 @@ Also viewable on Notion:
 ![Screenshot of frontend testing page on Notion](./docs/notion-frontend-testing.jpg) at this [URL](https://weppreciate.notion.site/Front-end-manual-testing-5a8b5cf1876b406ba9e167af397996cd?pvs=4)
 
 ### Back end user testing
+
 Backend user testing was exported from Notion, and is viewable as a PDF [here](./docs/backend-user-testing/backend-user-testing.pdf).
 
 Screenshots of the Postman results are also saved in this submission, to `../backend-user-testing/backend-testing-screenshots/` with the filenames matching the test ID number (ie UT-1.png).
@@ -1826,8 +1815,6 @@ Screenshots of the Postman results are also saved in this submission, to `../bac
 Also viewable on Notion:
 ![Screenshot of backend testing page on Notion](./docs/notion-backend-testing.jpg) at this [URL](https://weppreciate.notion.site/Backend-testing-b66ded2a07984aff8566a682a2d77f39?pvs=4)
 
-
 ## R9 Utilises a formal testing framework
 
 ### Front end testing
-
