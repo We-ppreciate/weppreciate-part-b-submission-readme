@@ -17,6 +17,24 @@
 
 [Part-B Frontend deployment](https://playful-pudding-8faa4e.netlify.app/)
 
+### Notion
+
+[We'ppreciate Client pack](https://weppreciate.notion.site/We-pprecite-Client-Pack-586c89a97cdb444993671762320bb764?pvs=4)
+
+[Tasks](https://weppreciate.notion.site/75b89fa68e894f5f954787c5eeef489f?v=989fd6fd0ad146e4af4e6ada44b70641&pvs=4)
+
+[Projects](https://weppreciate.notion.site/fd3c53db9a1f4e27b59dcc063b46864a?v=41b6032216174cf59edfa04a8e317941&pvs=4)
+
+[Sprint board](https://weppreciate.notion.site/8230b9bd9475472a97c6031be273cdbc?v=75f37625837d4278a914328bf30de9e1&pvs=4)
+
+[Sprints](https://weppreciate.notion.site/096aac0b89cd4d4ba7fcd0b02ce6187a?v=b9b2dde3fc2e4b53b59e3509f8c3d2b2&pvs=4)
+
+[Meetings](https://weppreciate.notion.site/33e465ae7b2c4bdf9a261acbbf5167e0?v=00a1f910091e4b5c98a984ca396519f6&pvs=4)
+
+[Docs](https://weppreciate.notion.site/59318e1ab6b840efbb38de4eb82117ec?v=c5f3f0c8a680426482b9cb31b7ec58ce&pvs=4)
+
+
+
 
 ## R1 At minimum use MongoDB, Express, React, Node
 We used the following packages, frameworks and technology:
@@ -110,6 +128,60 @@ We elected to run 6 one-week sprints, and while we understand the regular timesp
 Sprints were burned down, and at the end of each, a review took place to align on what was achieved and closed, what was delayed, and what dependencies were impacted by the delays.
 
 Each sprint had three standups scheduled, in addition to the communication carried out over Discord and through notes, comments and "@" through Notion's platform.
+
+We continued utilising Standup Meeting records, Task delegation updating and control, timeslines and kanban throughout.
+
+#### End of Sprint 2
+
+![Documents list at the end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/docs-end-sprint-2.jpg)
+
+![Projects at the end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/project-end-sprint-2.jpg)
+
+![Sprint taskboard end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/sprint-board-end-wk-2.jpg)
+
+![Standup 1 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-1-wk-2.jpg)
+
+![Standup 2 in Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/standup-2-wk-2.jpg)
+
+![Task timeline, end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/task-timeline-end-wk-2.jpg)
+
+![Tasks by Project at end of Sprint 2](./docs/Notion-PM-screenshots/end-wk-2/tasks-by-project-end-wk-2.jpg)
+
+#### End of Sprint 3
+
+![Documents list at the end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/docs-end-sprint-3.jpg)
+
+![Projects at the end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/projects-end-sprint-3.jpg)
+
+![Sprint taskboard end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/sprint-board-end-wk-3.jpg)
+
+![Standup 1 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-1-wk-3.jpg)
+
+![Standup 2 in Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/standup-2-wk-3.jpg)
+
+![Task timeline, end of Sprint 3](./docs/Notion-PM-screenshots/end-wk-3/task-timeline-end-wk-3.jpg)
+
+![Tasks by Project at end of Sprint 3 (part a)](./docs/Notion-PM-screenshots/end-wk-3/tasks-by-project-end-sprint-3a.jpg)
+
+![Tasks by Project at end of Sprint 3 (part b)](./docs/Notion-PM-screenshots/end-wk-3/tasks-by-project-end-wk-3b.jpg)
+
+#### End of Sprint 4
+
+![Documents list at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/docs-end-sprint-4.jpg)
+
+![Projects at the end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/project-end-sprint-4.jpg)
+
+![Sprint taskboard end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/sprint-board-end-wk-4.jpg)
+
+![Standup 1 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-1-wk-4.jpg)
+
+![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-2-wk-4.jpg)
+
+![Standup 2 in Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/standup-3-wk-4.jpg)
+
+![Task timeline, end of Sprint 4](./docs/Notion-PM-screenshots/end-wk-4/task-timeline-end-wk-4.jpg)
+
+![Tasks by Project at end of Sprint 4 (part a)](./docs/Notion-PM-screenshots/end-wk-4/task-by-project-end-wk-4.jpg)
 
 ### Use a recognised task delegation methodology
 
